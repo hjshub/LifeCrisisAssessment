@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>보건복지부 생명위기 평가도구 Admin</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/Chart.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+	<script src="../asset/js/customChart.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../asset/css/style.css">
+
+</head>
+<body>
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<ul>
+					<li><a href="#">로그아웃</a></li>
+					<li><a href="#">평가도구 바로가기</a></li>
+				</ul>
+			</div>
+		</div>	
+		<div class="gnb">
+			<div class="container">
+				<ul>
+					<li><a href="../result/CounselResult.html">평가결과</a></li>
+					<li><a href="../counselor/CounselorList.html">평가자관리</a></li>
+					<li><a href="../agency/AgencyManagement.html">기관관리</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2>평가대상자 통계 그래프</h2>
+				<div class="chart-area innerWrap">
+					<div class="chart-layer">
+						<div style="width:430px; height:327px;">
+						 	<canvas id="pieChart" class="chartList"></canvas>
+						</div>
+						<div class="chartTit"><span>[성별 통계]</span></div>
+					</div>
+					<div class="chart-layer">
+						<div style="width:535px; height:327px;">
+						 	<canvas id="barChart" class="chartList"></canvas>
+						</div>
+						<div class="chartTit"><span>[연령별 통계]</span></div>
+					</div>
+				</div>	
+			</section>
+			
+			<section>
+				<h2>기관별 결과</h2>
+				<div class="caption inline top"><b class="nec"><em class="hiddenTxt">기준</em></b><span>기준 : 평가를 완료한 수치</span></div>
+				<!-- 2021.05.18. 기관 검색 영역 추가 -->
+				<div class="table-layout">
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>기관</span></dt>
+							<dd>
+								<div class="form-group etc">
+									<span>
+										<label for="search" class="hiddenTxt"><em>검색</em></label>
+										<input id="search" type="text" placeholder="검색어를 입력하세요." autocomplete="off" />
+									</span>
+									<span>
+										<button class="btn-type-xs btn-type-skyblue">검색</button>
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="table-style01 sortWrap">
+					<table>
+						<caption>기관별 결과(기관, 담당자수, 내담자수, 자가보고형, 관찰자평가형, 자살위험도평가면담형)</caption>
+						<colgroup>
+							<col style="width:26%;"/>
+							<col style="width:12.2%;"/>
+							<col style="width:12.2%;"/>
+							<col style="width:14.2%;"/>
+							<col style="width:14.2%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><div>기&nbsp;관 <button class="sort" type="button"><em class="hiddenTxt">등록순</em></button></div></th>
+								<th scope="col"><div>평가자 <button class="sort" type="button"><em class="hiddenTxt">등록순</em></button></div></th>
+								<th scope="col"><div>평가대상자 <button class="sort asc" type="button"><em class="hiddenTxt">오름차순</em></button></div></th>
+								<th scope="col" class="ns"><div><span class="nec"><em class="hiddenTxt">기준</em></span>자가보고형 <button class="sort asc" type="button"><em class="hiddenTxt">오름차순</em></button></div></th>
+								<th scope="col" class="ns"><div><span class="nec"><em class="hiddenTxt">기준</em></span>관찰자평가형 <button class="sort desc" type="button"><em class="hiddenTxt">내림차순</em></button></div></th>
+								<th scope="col" class="ns"><div><span class="nec"><em class="hiddenTxt">기준</em></span>자살위험도평가면담형 <button class="sort desc" type="button"><em class="hiddenTxt">내림차순</em></button></div></th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td class="break">삼성서울병원</td>
+								<td>10명</td>
+								<td>35명</td>
+								<td>10회</td>
+								<td>5회</td>
+								<td>1회</td>
+							</tr>
+							<tr>
+								<td class="break">서대문구정신건강복지센터</td>
+								<td>14명</td>
+								<td>40명</td>
+								<td>9회</td>
+								<td>1회</td>
+								<td>2회</td>
+							</tr>
+							<tr>
+								<td class="break">은평구정신건강복지센터</td>
+								<td>15명</td>
+								<td>28명</td>
+								<td>0회</td>
+								<td>0회</td>
+								<td>1회</td>
+							</tr>
+							<tr>
+								<td class="break">중구정신건강복지센터</td>
+								<td>3명</td>
+								<td>15명</td>
+								<td>0회</td>
+								<td>1회</td>
+								<td>0회</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="paging">
+					<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+					<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+					<ul>
+						<li class="selected"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+					<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>퍼블리싱 가이드</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="asset/css/style.css">
+		<link rel="stylesheet" type="text/css" href="asset/css/guide.css">
+	</head>
+	<body>	
+		<div id="wrapper">
+			<h1>생명위기평가 도구 퍼블리싱 가이드</h1>
+			<div class="guide_box" id="guide_box01">
+				<h2>css &amp; js</h2>
+				<div>
+					<ul class="innerWrap">
+						<li>
+							<dl class="col-02">
+								<dt>CSS</dt>
+								<dd>
+									<strong>공통</strong><br/>
+									<em>reset.css</em><br/>
+									<em>font.css</em><br/>
+									<em>jquery-ui-min.css</em><br/>
+									<em>style.css (공통)</em><br/>
+									<em>style_1024.css (max-width : 1024px)</em><br/>
+									<em>style_768.css (max-width : 768px)</em><br/>
+									<em>style_640.css (max-width : 640px)</em><br/>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl class="col-03">
+								<dt>JS</dt>
+								<dd>
+									<strong>공통</strong><br/>
+									<em>jquery-3.4.0.min.js</em><br/>
+									<em>jquery-ui.min.js</em><br/>
+									<em>common.js</em><br/>
+								</dd>
+								<dd>
+									<strong>평가결과 (인쇄화면)</strong><br/>
+									<em>Chart.min.js</em><br/>
+									<em>customChart.js</em><br/>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="guide_box" id="guide_box02">
+				<h2>font</h2>
+				<div>
+					<div class="title">font-family : &lsquo;Noto Sans CJK KR&rsquo;</div>
+					<ul class="innerWrap wide">
+						<li>
+							<dl>
+								<dt>font-weight : 100 [Thin]</dt>
+								<dd class="ft-Thin">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 300 [Light]</dt>
+								<dd class="ft-Light">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 400 [DemiLight]</dt>
+								<dd class="ft-DemiLight">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 500 [Regular]</dt>
+								<dd class="ft-Regular">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 600 [Medium]</dt>
+								<dd class="ft-Medium">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 700 [Bold]</dt>
+								<dd class="ft-Bold">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>font-weight : 900 [Black]</dt>
+								<dd class="ft-Black">가나다라마바사아자차카타파하 1234567890</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="guide_box" id="guide_box03">
+				<h2>paging</h2>
+				<div>
+					<ul class="innerWrap">
+						<li>
+							<dl>
+								<dt>Paging</dt>
+								<dd>
+									<div class="paging">
+										<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+										<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+										<ul>
+											<li class="selected"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li><a href="#">6</a></li>
+											<li><a href="#">7</a></li>
+											<li><a href="#">8</a></li>
+											<li><a href="#">9</a></li>
+											<li><a href="#">10</a></li>
+										</ul>
+										<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+										<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="guide_box" id="guide_box04">
+				<h2>button</h2>
+				<div>
+					<ul class="innerWrap">
+						<li>
+							<dl>
+								<dt>Color</dt>
+								<dd>
+									<div class="btn-wrap-left">
+										<button class="btn-type-default">default</button>
+										<button class="btn-type-gray">gray</button>
+										<button class="btn-type-skyblue">skyblue</button>
+										<button class="btn-type-cf-blue">cf-blue</button>
+										<button class="btn-type-blue">blue</button>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>Size</dt>
+								<dd>
+									<div class="btn-wrap-left">
+										<button class="btn-type-xs btn-type-gray">x-small button</button>
+									</div>
+									<div class="btn-wrap-left">
+										<button class="btn-type-sm btn-type-gray">small button</button>
+									</div>
+									<div class="btn-wrap-left">
+										<button class="btn-type-md btn-type-gray">medium button</button>
+									</div>
+									<div class="btn-wrap-left">
+										<button class="btn-type-lg btn-type-gray">large button</button>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>Line</dt>
+								<dd>
+									<div class="btn-wrap-left">
+										<button class="btn-type-line blue01 sm">line button</button>
+										<button class="btn-type-line blue01" style="margin-top:0;">line button</button>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>round</dt>
+								<dd>
+									<div class="btn-wrap-left">
+										<button class="btn-type-gray round">round button</button>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="guide_box" id="guide_box06">
+				<h2>input</h2>
+				<div>
+					<ul class="innerWrap">
+						<li>
+							<dl>
+								<dt>Type = Checkbox</dt>
+								<dd>
+									<div class="chk-group label">
+										<span>
+											<input id="opChk01" name="" type="checkbox" checked/>
+											<label for="opChk01">checked</label>
+										</span>
+										<span style="margin-left:20px;">
+											<input id="opChk02" name="" type="checkbox"/>
+											<label for="opChk02">unchecked</label>
+										</span>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>Type = Radio</dt>
+								<dd>
+									<div class="radio-group">
+									<span>
+										<input id="op_1" type="radio" name="radioSample" checked/>
+										<label for="op_1">checked</label>
+									</span>
+									<span>
+										<input id="op_2" type="radio" name="radioSample" />
+										<label for="op_2">unchecked</label>
+									</span>
+								</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<ul class="innerWrap">
+						<li>
+							<dl>
+								<dt>Type = Text</dt>
+								<dd>
+									<div class="form-group">
+										<span>
+											<input type="text" placeholder="default" autocomplete="off" />
+										</span>
+										<span>
+											<input type="text" placeholder="disabled" autocomplete="off" disabled/>
+										</span>
+										<span>
+											<input type="text" placeholder="readonly" autocomplete="off" readonly/>
+										</span>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="guide_box" id="guide_box08">
+				<h2>select</h2>
+				<div>
+					<ul class="innerWrap">
+						<li>
+							<dl>
+								<dt>Select</dt>
+								<dd>
+									<div class="form-group">
+										<span class="customed-select">
+											<label for="select01"><em class="hiddenTxt">분류</em></label>
+											<select id="select01">
+												<option value="">옵션</option>
+												<option value="">옵션1</option>
+												<option value="">옵션2</option>
+												<option value="">옵션3</option>
+												<option value="">옵션4</option>
+											</select>
+										</span>
+									</div>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>	
+	  	

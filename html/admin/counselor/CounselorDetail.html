@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>보건복지부 생명위기 평가도구 Admin</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../asset/css/style.css">
+
+</head>
+<body>
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<ul>
+					<li><a href="#">로그아웃</a></li>
+					<li><a href="#">평가도구 바로가기</a></li>
+				</ul>
+			</div>
+		</div>	
+		<div class="gnb">
+			<div class="container">
+				<ul>
+					<li><a href="../result/CounselResult.html">평가결과</a></li>
+					<li><a href="../counselor/CounselorList.html">평가자관리</a></li>
+					<li><a href="../agency/AgencyManagement.html">기관관리</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2><em class="color-blue1">Sam123@shxxx.com.com</em>평가자</h2>
+				<div class="table-layout">
+					<div class="row">
+						<dl>
+							<dt><span>이메일아이디</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="md">
+										<input id="" type="text" title="이메일 아이디" value="Sam123@shxxx.com" disabled />
+									</span>
+									<span>
+										<button type="button" class="btn-type-default" onclick="$funcCommon().openPop('deleteID')">계정삭제</button>
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt><span>비밀번호</span></dt>
+							<dd>
+								<div class="form-group calendar">
+									<div class="btn-wrap-inline">
+										<button type="button" class="btn-type-skyblue" onclick="$funcCommon().openPop('modifyPW')">비밀번호 수정</button>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt><span>기관명</span></dt>
+							<dd>
+								 <div class="form-group">
+									<span class="md">
+										<input id="" type="text" title="기관명" value="삼성서울병원" onclick="$funcCommon().openPop('searchAgency');" onkeydown="if(event.keyCode == 13) $funcCommon().openPop('searchAgency');" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt><span>담당자명</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="md">
+										<input id="" type="text" title="담당자명" value="홍길동" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt><span>승인여부</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="auto table"><em>승인대기</em></span>
+									<span>
+										<button type="button" class="btn-type-skyblue">승인버튼</button>
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn-type-blue">수정</button>
+					<button type="button" class="btn-type-gray">목록</button>
+				</div>
+			</section>	
+			
+			<section>
+				<h2>평가대상자 <em class="color-blue3">50</em>명</h2>
+				<div class="table-layout">
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>검색</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="customed-select">
+										<label for="search"><em class="hiddenTxt">분류</em></label>
+										<select id="search">
+											<option value="">전체</option>
+											<option value="">subject</option>
+											<option value="">내용</option>
+										</select>
+									</span>
+									<span class="xlg">
+										<label for="searchArea" class="hiddenTxt"><em>검색</em></label>
+										<input id="searchArea" type="text" placeholder="검색어를 입력하세요." autocomplete="off" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>기간</span></dt>
+							<dd>
+								<div class="form-group calendar">
+									<span>
+										<label for="startDate" class="hiddenTxt"><em>시작날짜선택</em></label>
+										<input class="date" id="startDate" type="text" autocomplete="off" />
+									</span>
+									<span class="auto">-</span>
+									<span>
+										<label for="endDate" class="hiddenTxt"><em>종료날짜선택</em></label>
+										<input class="date" id="endDate" type="text" autocomplete="off" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn-type-skyblue">검색</button>
+				</div>
+			</section>
+
+			<section>
+				<div class="table-style01">
+					<table>
+						<caption>평가자 목록(NO, 전문가ID, 이메일 아이디, 성명, 기관명, 승인여부, 가입일, 비고)</caption>
+						<colgroup>
+							<col style="width:6%;"/>
+							<col style="width:11.5%;"/>
+							<col style="width:20%;"/>
+							<col style="width:20%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">NO</th>
+								<th scope="col">Subject</th>
+								<th scope="col">평가시작일</th>
+								<th scope="col">최종평가일</th>
+								<th scope="col">철회사유</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr class="disabled">
+								<td>50</td>
+								<td class="break">S101</td>
+								<td>2021-04-08 12:00</td>
+								<td>2021-04-10 12:00</td>
+								<td>철회사유 테스트<em class="color-blue1">(2021-06-24)</em></td>
+							</tr>
+							<tr>
+								<td>49</td>
+								<td class="break">S102</td>
+								<td>2021-04-03 15:00</td>
+								<td>2021-04-03 18:00</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>48</td>
+								<td class="break">S131</td>
+								<td>2021-04-02 13:00</td>
+								<td>2021-04-03 13:00</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>47</td>
+								<td class="break">S130</td>
+								<td>2021-03-10 14:00</td>
+								<td>2021-03-11 14:00</td>
+								<td></td>
+							</tr>
+							<tr class="disabled">
+								<td>46</td>
+								<td class="break">S104</td>
+								<td>2021-03-02 08:00</td>
+								<td>2021-03-25 09:00</td>
+								<td>Subject 넘버 중 ID가 변경 됨<em class="color-blue1">(2021-06-24)</em></td>
+							</tr>
+							<tr>
+								<td>45</td>
+								<td class="break">S105</td>
+								<td>2021-03-01 11:30</td>
+								<td>2021-03-02 14:00</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="paging">
+					<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+					<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+					<ul>
+						<li class="selected"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+					<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+	<!-- 레이어 팝업(비밀번호 수정)-->
+	<div class="lpop md" id="modifyPW">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-body">
+			<h2>비밀번호 수정</h2>
+			<div class="table-layout-lpop">
+				<div class="row">
+					<dl>
+						<dt><span>비밀번호</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="password" id="" placeholder="비밀번호를 입력하세요." title="비밀번호" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>비밀번호 확인</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="password" id="" placeholder="비밀번호를 한번 더 입력하세요." title="비밀번호 확인" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="description"><em class="color-blue2">* 영문, 숫자, 특수문자 조합 8자리 이상</em></div>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn-type-blue btn-pw-modify">확인</button>
+			<button type="button" class="btn-type-gray btn-cancel">취소</button>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업(계정삭제사유)-->
+	<div class="lpop md" id="deleteID">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-body">
+			<h2>계정삭제사유</h2>
+			<div class="table-layout-lpop">
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn-type-blue btn-id-delete">확인</button>
+			<button type="button" class="btn-type-gray btn-cancel">취소</button>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업(기관명 검색) 2021.06.21_추가 -->
+	<div class="lpop sm" id="searchAgency">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close2.png" alt="레이어 팝업 닫기"></button>
+		<div>
+			<dl>
+				<dt>지역별</dt>
+				<dd>
+					<div class="form-group area">
+						<span class="customed-select">
+							<label for="search"><em class="hiddenTxt">지역 선택</em></label>
+							<select id="search">
+								<option value="">지역을 선택해 주세요.</option>
+								<option value="">서울</option>
+								<option value="">경기</option>
+								<option value="">강원도</option>
+								<option value="">전라도</option>
+								<option value="">경상도</option>
+							</select>
+						</span>
+					</div>
+				</dd>
+				<dd>
+					<div class="form-group search">
+						<span><input type="text" placeholder="검색어를 입력하세요."></span>
+						<span><button type="button" class="btn-type-skyblue">검색</button></span>
+					</div>
+					<div class="search--result">
+						<!-- 검색결과 : 검색, 기관명 선택 시 추가되는 리스트 -->
+						<!--
+						<ul>
+							<li>중앙자살예방센터</li>
+							<li>서울시정신건강복지센터</li>
+							<li>서울시자살예방센터</li>
+							<li>성북구자살예방센터</li>
+							<li>강남구정신건강복지센터</li>
+							<li>강동구정신건강복지센터</li>
+							<li>강북구정신건강복지센터</li>
+							<li>강서구정신건강복지센터</li>
+							<li>관악구정신건강복지센터</li>
+							<li>광진구정신건강복지센터</li>
+							<li>중앙자살예방센터</li>
+							<li>서울시정신건강복지센터</li>
+							<li>서울시자살예방센터</li>
+							<li>성북구자살예방센터</li>
+							<li>강남구정신건강복지센터</li>
+							<li>강동구정신건강복지센터</li>
+							<li>강북구정신건강복지센터</li>
+							<li>강서구정신건강복지센터</li>
+							<li>관악구정신건강복지센터</li>
+							<li>광진구정신건강복지센터</li>
+						</ul>
+						-->
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

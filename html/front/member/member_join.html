@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>전문가 회원가입 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body>
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<em class="hiddenTxt">백그라운드 영역</em>
+		</div>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="member">
+		<div class="container">
+			<h1 class="ft-xlg">
+				<span class="color-blue4">전문가 회원가입</span>
+			</h1>
+			<p>회원가입을 위한 정보를 입력해주세요.</p>
+			<p>가입 후, 관리자 승인이 완료되어야 이용이 가능합니다.</p>
+			<p><em>※모든 항목은 필수 입력 사항입니다.</em></p>
+			<div class="memberInfo">
+				<form action="\" method="">
+					<ul>
+						<li>
+							<div class="form-group">
+								<strong>이메일 아이디</strong>
+								<span>
+									<input type="text" title="이메일 아이디" placeholder="아이디를 입력해 주세요." />
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<strong>비밀번호</strong>
+								<span>
+									<input type="password" title="비밀번호" placeholder="비밀번호를 입력해 주세요." />
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<strong>비밀번호확인</strong>
+								<span>
+									<input type="password" title="비밀번호 확인" placeholder="비밀번호를 한번 더 입력해 주세요." />
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<strong>기관명</strong>
+								<span>
+									<input type="text" title="기관명" onclick="$funcCommon().openPop('searchAgency');" onkeydown="if(event.keyCode == 13) $funcCommon().openPop('searchAgency');" placeholder="기관명을 입력해 주세요." />
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<strong>담당자명</strong>
+								<span>
+									<input type="text" title="담당자명" placeholder="담당자명을 입력해 주세요." />
+								</span>
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div class="policy">
+				<div class="chk-group label">
+					<a href="javascript:void(0);" onclick="$funcCommon().openPop('privacy');"><em>개인정보 수집&middot;이용 동의</em></a>
+					<span>
+						<input id="agree01" name="agree01" type="checkbox"/>
+						<label for="agree01"><em>동의합니다.</em></label>
+					</span>
+				</div>
+				<div class="chk-group label">
+					<a href="javascript:void(0);" onclick="$funcCommon().openPop('policy');"><em>이용약관동의</em></a>
+					<span>
+						<input id="agree02" name="agree02" type="checkbox"/>
+						<label for="agree02"><em>동의합니다.</em></label>
+					</span>
+				</div>
+			</div>
+			<div class="btn-wrap-center">
+				<button type="button" class="btn-type-md" onclick="history.go(-1);">취소</button>
+				<button type="button" class="btn-type-md btn-type-blue">회원가입</button>
+			</div>	
+		</div>
+	</div>
+	<!--// 본문 -->
+
+	<!-- 레이어 팝업(기관명 검색)-->
+	<div class="lpop sm" id="searchAgency">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close2.png" alt="레이어 팝업 닫기"></button>
+		<div>
+			<dl>
+				<dt>지역별</dt>
+				<dd>
+					<div class="form-group area">
+						<span class="customed-select">
+							<label for="search"><em class="hiddenTxt">지역 선택</em></label>
+							<select id="search">
+								<option value="">지역을 선택해 주세요.</option>
+								<option value="">서울</option>
+								<option value="">경기</option>
+								<option value="">강원도</option>
+								<option value="">전라도</option>
+								<option value="">경상도</option>
+							</select>
+						</span>
+					</div>
+				</dd>
+				<dd>
+					<div class="form-group search">
+						<span><input type="text" placeholder="검색어를 입력하세요."></span>
+						<span><button type="button" class="btn-type-skyblue">검색</button></span>
+					</div>
+					<div class="search--result">
+						<!-- 검색결과 : 검색, 기관명 선택 시 추가되는 리스트 -->
+						<!--
+						<ul>
+							<li>중앙자살예방센터</li>
+							<li>서울시정신건강복지센터</li>
+							<li>서울시자살예방센터</li>
+							<li>성북구자살예방센터</li>
+							<li>강남구정신건강복지센터</li>
+							<li>강동구정신건강복지센터</li>
+							<li>강북구정신건강복지센터</li>
+							<li>강서구정신건강복지센터</li>
+							<li>관악구정신건강복지센터</li>
+							<li>광진구정신건강복지센터</li>
+							<li>중앙자살예방센터</li>
+							<li>서울시정신건강복지센터</li>
+							<li>서울시자살예방센터</li>
+							<li>성북구자살예방센터</li>
+							<li>강남구정신건강복지센터</li>
+							<li>강동구정신건강복지센터</li>
+							<li>강북구정신건강복지센터</li>
+							<li>강서구정신건강복지센터</li>
+							<li>관악구정신건강복지센터</li>
+							<li>광진구정신건강복지센터</li>
+						</ul>
+						-->
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업(개인정보 수집ㆍ이용 동의)-->
+	<div class="lpop" id="privacy">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-head"><h3>개인정보 수집&middot;이용 동의</h3></div>
+		<div class="pop-body">
+			<div class="table-style row">
+				<table>
+					<caption>평가대상자 명단(Subject#, 평가시작일, 최종평가일)</caption>
+					<colgroup>
+						<col style="width:25%;"/>
+						<col style="width:auto;"/>
+					</colgroup>
+					<thead></thead>
+					<tfoot></tfoot>
+					<tbody>
+						<tr>
+							<th scope="row">수집항목</th>
+							<td>이메일, 비밀번호, 기관명, 담당자명</td>
+						</tr>
+						<tr>
+							<th scope="row">이용목적</th>
+							<td>
+								생명위기 평가도구 (모바일 웹, 앱) 서비스 가입 및 관리, 서비스 제공<br/>
+								- 자살 고위험군 선별 도구 (관찰자 평가형, 자가 평가형), 자살 위험도 평가 면담도구형<br/>
+								- 평가대상자 관리 및 도구 결과 보고서
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">보유 및 이용기간</th>
+							<td>생명위기 평가도구 계정 삭제 시 파기</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p>위 개인정보의 수집 및 이용에 대한 동의를 거부 할 수 있으나,<br/> 동의를 거부 할 경우 회원가입이 제한됩니다.</p>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업(이용약관동의)-->
+	<div class="lpop" id="policy">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-head"><h3>이용약관동의</h3></div>
+		<div class="pop-body">
+			<div>
+				<dl>
+					<dt>제1장 총칙</dt>
+					<dd>
+						<p><strong>제1조 (목적)</strong></p>
+						<p>생명위기 평가도구(모바일 웹, 앱)에서 제공하는 모든 서비스(이하 &ldquo;서비스&rdquo;라 합니다)의 이용에 관한 사항을 규정함을 목적으로 합니다.</p>
+					</dd>
+					<dd>
+						<p><strong>제2조 (약관의 효력과 변경)</strong></p>
+						<ol>
+							<li>
+								당 서비스 이용자가 본 약관 내용에 동의하는 것을 조건으로 이용자에게 서비스를 제공하며,서비스 제공 행위 및 이용자의 서비스 사용 행위에는 본 약관을 우선적으로 적용하겠습니다.
+							</li>
+							<li>
+								당 서비스는 본 약관을 사전 고지 없이 변경할 수 있으며, 변경된 약관은 당 사이트 내에 공지함으로써 이용자가 직접 확인하도록 할 것입니다. 이용자가 변경된 약관에 동의하지 아니하는 경우 본인의 계정 삭제를 할 수 있으며, 계속 사용할 경우에는 약관 변경에 대한 암묵적 동의로 간주됩니다. 변경된 약관은 공지와 동시에 그 효력을 발휘합니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제3조 (약관 외 준칙)</strong></p>
+						<p>본 약관에 명시되지 않은 사항은 전기통신기본법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 기타 관련 법령의 규정에 의합니다.</p>
+					</dd>
+					<dd>
+						<p><strong>제4조 (정의)</strong></p>
+						<ol>
+							<li>
+								이용자(전문가 회원) :생명위기 평가도구(모바일 웹, 앱)에 전문가(평가자)로서로그인하여 본 약관에 따라 생명위기 평가도구 서비스를 이용해 평가를 진행하는 평가자를 말합니다.
+							</li>
+							<li>
+								평가대상자: 이용자가 생명위기도구를 이용하여 면담 및 설문을 하는 평가대상자를 말합니다.
+							</li>
+							<li>
+								관리자 : 서비스의 전반적인 관리와 원활한 운영을 위하여선정된자를 말합니다.
+							</li>
+							<li>
+								아이디: 이용고객의 식별과 이용자가 서비스 이용을 위한 이메일 주소로 문자,숫자,특수문자의 조합을 말합니다.
+							</li>
+							<li>
+								비밀번호 : 아이디에 대한 본인 여부를 확인하기 위하여 사용되는 영문,숫자,특수문자 중 2가지 조합으로 8자 이상을 말합니다.
+							</li>
+							<li>
+								개인정보 : 당해 정보에 포함되어 있는 기관명,담당자 서명등의 사항에 의하여 특정 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 인식할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함한다)를 말합니다.
+							</li>
+							<li>
+								계정 삭제:이용자가 이용계약을 종료하여 계정을 삭제하는 행위를 말합니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제5조 (서비스의 중단)</strong></p>
+						<ol>
+							<li>
+								생명위기 평가도구는 시스템 등 장치의 보수점검•교체 및 고장, 통신의 두절, 기타 불가항력적 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.
+							</li>
+							<li>
+								생명위기 평가도구는 제1항의 사유로 서비스 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여는 배상하지 아니합니다. 단, 생명위기 평가도구의 고의 또는 중과실이 있는 경우에는 그러하지 아니합니다.
+							</li>
+						</ol>
+					</dd>
+				</dl>
+				<dl>
+					<dt>제2장 회원의 가입 및 계정삭제</dt>
+					<dd>
+						<p><strong>제6조 (회원가입)</strong></p>
+						<ol>
+							<li>이용자은생명위기 평가도구에서 정한 양식에 따라 회원정보를 기입한 후 본 약관에 동의한다는 의사표시를 하고 관리자가 승인함으로써 회원가입이 완료됩니다.</li>
+							<li>
+								생명위기 평가도구는 전항과 같이 회원으로 가입할 것을 신청한 이용자 중 이하 각호에 해당하지 않는 한 회원으로 등록합니다.
+								<ul>
+									<li>가입신청자가 본 약관 제7조 제2항에 의거하여 이전에 회원 자격을 상실한 적이 있는 경우</li>
+									<li>등록내용에 허위, 기재누락, 오기가 있는 경우</li>
+									<li>기타 회원으로 등록하는 것이 생명위기 평가도구의 기술상 또는 업무 수행상 현저히 지장이 있다고 판단하는 경우</li>
+									<li>비밀번호가 영문, 숫자,특수문자 중2가지조합으로 8자 이상이 아닌 경우</li>
+								</ul>
+							</li>
+							<li>회원가입계약의 성립시기는 생명위기 평가도구가 승낙한 시점으로 합니다.</li>
+							<li>회원은 등록사항에 변경이 있는 경우, 생명위기 평가도구 관리자에게 전화 및 이메일로 그 변경사항을 알려야 합니다.</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제7조 (계정삭제 및 자격의 상실등)</strong></p>
+						<ol>
+							<li>회원은 생명위기평가도구에 언제든지 계정삭제를 요청할 수 있습니다. 단, 계정삭제의 요청은생명위기 평가도구 관리자에게전화 및 이메일로해야하며, 요청하는 자의 이름, 이메일,기관명,해지사유 등을 알려야 합니다.</li>
+							<li>
+								회원이 다음 각호의 사유에 해당하는 경우, 생명위기 평가도구는 회원자격을 상실시킬 수 있습니다
+								<ul>
+									<li>등록 신청 시에 허위 내용을 등록한 경우</li>
+									<li>다른 사람의 서비스 이용을 방해하거나 그 정보를 도용하는 등 질서를위협하는 경우</li>
+									<li>생명위기 평가도구 내에서 검증되지 않은 허위정보 및 기타 허락되지 않은 물품의 판매 행위를 하는 경우</li>
+									<li>생명위기 평가도구 내에서 허락되지 않은 진료행위 또는 진료행위를 위한 선전의 장소로 이용하는 경우</li>
+									<li>본 약관을 위반한 경우</li>
+									<li>기타 회원으로서의 자격을 지속시키는 것이 부적절하다고 판단되는 경우</li>
+								</ul>
+							</li>
+						</ol>
+					</dd>
+				</dl>
+				<dl>
+					<dt>제3장 개인정보의 보호</dt>
+					<dd>
+						<p><strong>제8조 (개인정보의 수집)</strong></p>
+						<ol>
+							<li>
+								생명위기 평가도구는 이용자의 정보수집 시 필요한 최소한의 정보를 수집합니다. 다음 사항을 필수 사항으로합니다.
+								<ul>
+									<li>필수항목 : 이메일, 비밀번호, 기관명, 담당자명</li>
+								</ul>
+							</li>
+							<li>
+								생명위기 평가도구는 개인정보의 보호를 위하여 관리자를 한정하여 그 수를 최소화하며 개인정보의 분실, 도난, 유출, 변조되지 아니하도록 안정성 확보에 필요한 기술적 조치 등을 강구합니다.
+							</li>
+							<li>생명위기 평가도구는 개인정보의 수집목적을 달성한 때에는 당해 개인정보를 지체없이 파기합니다.</li>
+							<li>비밀번호는 영문, 숫자,특수문자중2가지조합으로 8자이상이어야 합니다.</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제9조(개인정보의 이용 및 제공의 제한)</strong></p>
+						<ol>
+							<li>
+								제공된 개인정보는 당해 이용자의 동의없이목적외 이용이나 제3자에게 제공할 수 없으며, 이에 따른 이용자의 피해에 대한 모든 책임은 생명위기 평가도구가 집니다. 단, 다음의 경우에는 예외로 합니다.
+								<ul>
+									<li>법률에 특별한 규정이 있는 경우</li>
+									<li>통계작성&middot;학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우</li>
+								</ul>
+							</li>
+							<li>
+								정보통신서비스제공자로부터 이용자의 개인정보를 제공받은 자는 당해 이용자의 동의가 있거나 다른 법률에 특별한 규정이 있는 경우를 제외하고는 개인정보를 제공받은 목적 외의 용도로 이를 이용하거나 제3자에게 제공하여서는 안됩니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제10조(이용자 및 평가대상자의 권리)</strong></p>
+						<ol>
+							<li>
+								이용자(전문가 회원)는 언제든지회원가입 동의를 철회할 수 있습니다. 단, 철회의 의사표시는 생명위기 평가도구관리자에게 전화 및 이메일로 알려야 처가 할 수 있습니다.
+							</li>
+							<li>
+								평가대상자는 이용자에게 자신의 평가 결과 및 정보 삭제를 요구할 수 있습니다.단, 삭제할 경우 사유를 기재해야 합니다.
+							</li>
+							<li>
+								이용자는 생명위기평가도구에 자신의 개인정보에 대한 열람을 요구할 수 있으며, 자신의 개인정보에 오류가 있는 경우에는 그 정정을 요구할 수 있습니다.
+							</li>
+							<li>
+								철회, 열람, 정정의 요구는 생명위기평가도구에전화 및 이메일로 문의할 수 있습니다. 이용자가 오류의 정정을 요구한 경우에는 생명위기 평가도구가 그 오류를 정정할 때까지 당해 개인정보를 이용하지 않습니다.
+							</li>
+						</ol>
+					</dd>
+				</dl>
+				<dl>
+					<dt>제4장 서비스에 관한 책임의 제한</dt>
+					<dd>
+						<p><strong>제11조 (면담 및 설문 내용)</strong></p>
+						<ol>
+							<li>
+								생명위기 평가도구는평가대상자의 면담및 설문 내용이 담당자(이용자)를 제외한 제3자에게 유출되지 않도록 최선을 다해 보안을 유지하려고 노력합니다. 다만, 다음 각호의 사유로 인하여 상담 내용이 공개 또는 훼손된 경우 생명위기 평가도구는 책임을 지지 않습니다.
+								<ul>
+									<li>이용자의 부주의로 비밀번호가 유출된 경우</li>
+									<li>이용자가 &lsquo;평가대상자삭제&rsquo; 기능을 사용한 경우</li>
+									<li>천재지변등 기타 불가항력에 의한 경우</li>
+								</ul>
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제12조 (평가도구 및 면담도구 결과 제공 서비스)</strong></p>
+						<ol>
+							<li>
+								생명위기 평가도구에서 제공하는 각 평가도구와면담도구 결과는 자살을 예측하는 단독적인 수단으로 사용될 수 없으며, 위험성에 대한 지표입니다.어떠한 경우에도 전문적인 의학적 진단, 진료, 치료를 대신할 수 없습니다.
+							</li>
+							<li>
+								생명위기 평가도구는 제공하는 결과 제공 서비스는 전적으로 이용자의 판단에 따라 이용되는 것으로서, 생명위기 평가도구는 건강관련정보의 제공과 관련하여 어떠한 책임도 지지 않습니다.
+							</li>
+						</ol>
+					</dd>
+				</dl>
+				<dl>
+					<dt>제5장 생명위기 평가도구 및 이용자의 의무</dt>
+					<dd>
+						<p><strong>제13조 (생명위기 평가도구의 의무)</strong></p>
+						<ol>
+							<li>
+								생명위기 평가도구는 법령과 본 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 본 약관이 정하는 바에 따라 지속적이고, 안정적으로 서비스를 제공하는 데 최선을 다합니다.
+							</li>
+							<li>
+								생명위기 평가도구는 이용자의개인신상정보의 보안에 대하여 기술적 안전 조치를 강구하고 관리에 만전을 기함으로써 이용자의 정보보안에 최선을 다합니다.
+							</li>
+							<li>
+								생명위기 평가도구는 이용자가 원하지 않는 영리목적의 광고성 전자우편을 발송하지 않습니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제14조 (이용자의비밀번호에 대한 의무)</strong></p>
+						<ol>
+							<li>
+								이용자의비밀번호의 관리의 부실로 인한 모든 책임은 이용자가 부담합니다.
+							</li>
+							<li>
+								이용자는비밀번호를 도난당하거나 제3자에게 사용되고 있음을 인지한 경우에는 바로 생명위기평가도구에 통보하고 생명위기 평가도구의 안내가 있는 경우에는 그에 따라야 합니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제15조 (이용자의 의무)</strong></p>
+						<ol>
+							<li>
+								이용자는 다음의 행위를 하여서는 안됩니다.
+								<ul>
+									<li>신청 또는 변경 시 허위내용의 등록</li>
+									<li>범죄행위를 목적으로 하거나 기타 범죄행위와 관련된 행위</li>
+									<li>생명위기평가도구에 게시된 정보의 변경</li>
+									<li>생명위기 평가도구 기타 제3자의 저작권 등 지적재산권에 대한 침해</li>
+									<li>생명위기 평가도구 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
+									<li>기타 부적절하다고 판단하는 행위</li>
+								</ul>
+							</li>
+						</ol>
+					</dd>
+				</dl>
+				<dl>
+					<dt>제6장 기타</dt>
+					<dd>
+						<p><strong>제 16 조 (당 서비스의 소유권)</strong></p>
+						<ol>
+							<li>
+								당 서비스, 그에 필요한 소프트웨어, 이미지, 마크, 로고, 디자인, 서비스명칭, 정보 및 상표 등과 관련된 지적재산권 및 기타 권리는 당 사이트에 소유권이 있습니다.
+							</li>
+							<li>
+								이용자는 당 서비스가 명시적으로 승인한 경우를 제외하고는 전항의 소정의 각 재산에 대한 전부 또는 일부의 수정, 대여, 대출, 판매, 배포, 제작, 양도, 재라이센스, 담보권 설정 행위, 상업적 이용 행위를 할 수 없으며, 제3자로 하여금 이와 같은 행위를 하도록 허락할 수 없습니다.
+							</li>
+						</ol>
+					</dd>
+					<dd>
+						<p><strong>제 17조 (손해배상)</strong></p>
+						<p>당 사이트는 무료로 제공되는 서비스와 관련하여 회원에게 어떠한 손해가 발생하더라도 당 사이트가 고의로 행한 범죄행위를 제외하고 이에 대하여 책임을 부담하지 아니합니다.</p>
+					</dd>
+				</dl>	
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

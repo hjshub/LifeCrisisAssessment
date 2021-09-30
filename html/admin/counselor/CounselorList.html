@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>보건복지부 생명위기 평가도구 Admin</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../asset/css/style.css">
+
+</head>
+<body>
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<ul>
+					<li><a href="#">로그아웃</a></li>
+					<li><a href="#">평가도구 바로가기</a></li>
+				</ul>
+			</div>
+		</div>	
+		<div class="gnb">
+			<div class="container">
+				<ul>
+					<li><a href="../result/CounselResult.html">평가결과</a></li>
+					<li><a href="../counselor/CounselorList.html">평가자관리</a></li>
+					<li><a href="../agency/AgencyManagement.html">기관관리</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2>평가자 관리</h2>
+				<div class="table-layout">
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>검색</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="customed-select">
+										<label for="search"><em class="hiddenTxt">분류</em></label>
+										<select id="search">
+											<option value="">전체</option>
+											<option value="">전문가 ID</option>
+											<option value="">이메일 ID</option>
+											<option value="">성명</option>
+											<option value="">기관명</option>
+										</select>
+									</span>
+									<span class="xlg">
+										<label for="searchArea" class="hiddenTxt"><em>검색</em></label>
+										<input id="searchArea" type="text" placeholder="검색어를 입력하세요." autocomplete="off" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>기간</span></dt>
+							<dd>
+								<div class="form-group calendar">
+									<span>
+										<label for="startDate" class="hiddenTxt"><em>시작날짜선택</em></label>
+										<input class="date" id="startDate" type="text" autocomplete="off" />
+									</span>
+									<span class="auto">-</span>
+									<span>
+										<label for="endDate" class="hiddenTxt"><em>종료날짜선택</em></label>
+										<input class="date" id="endDate" type="text" autocomplete="off" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl>
+							<dt><span>승인여부</span></dt>
+							<dd>
+								<div class="radio-group">
+									<span>
+										<input id="op_all" type="radio" name="Cf" checked/>
+										<label for="op_all">전체</label>
+									</span>
+									<span>
+										<input id="op_cpl" type="radio" name="Cf" />
+										<label for="op_cpl">승인완료</label>
+									</span>
+									<span>
+										<input id="op_rd" type="radio" name="Cf" />
+										<label for="op_rd">승인대기</label>
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn-type-skyblue">검색</button>
+				</div>
+			</section>	
+			<section>
+				<div class="caption">
+					<span>전체 <em>00</em>건</span>
+				</div>
+				<div class="table-style01">
+					<table>
+						<caption>평가자 목록(NO, 전문가ID, 이메일 아이디, 성명, 기관명, 승인여부, 가입일, 비고)</caption>
+						<colgroup>
+							<col style="width:5%;"/>
+							<col style="width:6%;"/>
+							<col style="width:11%;"/>
+							<col style="width:18%;"/>
+							<col style="width:8%;"/>
+							<col style="width:20%;"/>
+							<col style="width:11%;"/>
+							<col style="width:11%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="chk-group">
+										<span>
+											<input id="allChk_Cs" name="allChk_Cs" type="checkbox"/>
+											<label for="allChk_Cs"><em class="hiddenTxt">전체</em></label>
+										</span>
+									</div>	
+								</th>
+								<th scope="col">NO</th>
+								<th scope="col">평가자(Number)</th>
+								<th scope="col">이메일 아이디</th>
+								<th scope="col">성명</th>
+								<th scope="col">기관명</th>
+								<th scope="col">승인일</th>
+								<th scope="col">가입일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr class="disabled">
+								<td></td>
+								<td>12</td>
+								<td class="break">P0005</td>
+								<td class="break">a***@xxxx.com</td>
+								<td>홍길동</td>
+								<td class="break">서대문구정신건강복지센터</td>
+								<td>2021-01-02</td>
+								<td>2021-01-03</td>
+								<td class="break">센터이관</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Cs_01" name="Cs_01" type="checkbox"/>
+											<label for="Cs_01"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>11</td>
+								<td class="break"><a href="CounselorDetail.html">P0004</a></td>
+								<td class="break">bc***@xxxx.com</td>
+								<td>홍길동</td>
+								<td class="break">은평구정신건강복지센터</td>
+								<td>2021-01-04</td>
+								<td>2021-01-05</td>
+								<td class="break">-</td>
+							</tr>
+							<tr class="disabled">
+								<td></td>
+								<td>10</td>
+								<td class="break">P0003</td>
+								<td class="break">ac***@xxxx.com</td>
+								<td>홍길동</td>
+								<td class="break">중구정신건강복지센터</td>
+								<td>2021-01-07</td>
+								<td>2021-01-08</td>
+								<td class="break">아이디변경</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Cs_02" name="Cs_02" type="checkbox"/>
+											<label for="Cs_02"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>9</td>
+								<td class="break"><a href="CounselorDetail.html">P0002</a></td>
+								<td class="break">bc***@xxxx.com</td>
+								<td>홍길동</td>
+								<td class="break">은평구정신건강복지센터</td>
+								<td>2021-01-04</td>
+								<td>2021-01-05</td>
+								<td class="break">-</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Cs_03" name="Cs_03" type="checkbox"/>
+											<label for="Cs_03"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>8</td>
+								<td class="break"><a href="CounselorDetail.html">P0001</a></td>
+								<td class="break">bc***@xxxx.com</td>
+								<td>홍길동</td>
+								<td class="break">은평구정신건강복지센터</td>
+								<td>2021-01-04</td>
+								<td>2021-01-05</td>
+								<td class="break">-</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap-inline bottom">
+					<button type="button" class="btn-type-blue">선택승인</button>
+				</div>
+				<div class="paging">
+					<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+					<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+					<ul>
+						<li class="selected"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+					<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 위험도 평가 도구 결과 보고서 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/Chart.min.js"></script>
+	<script src="../asset/js/customChart.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body>
+	<!--본문 -->
+	<div id="wrapper" class="print">
+		<div class="container">
+			<section>
+				<h2>자살 위험도 평가 도구 결과 보고서</h2>
+				<div class="table-layout">
+					<div class="col2">
+						<dl>
+							<dt><span>Subject#</span></dt>
+							<dd><strong class="color-blue1">S101</strong></dd>
+							<dt><span>Subject ID</span></dt>
+							<dd><em class="xs color-blue1">2021-P0011-S101</em></dd>
+							<dt><span>리포트 최종 생성일</span></dt>
+							<dd><em class="xs">2021-01-08</em><em class="xs">13:20</em></dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>자살 위험도 자가평가도구(SSQ-SR)</h3>
+				<div class="description">
+					<em>※아래 제시되는 점수와 심각도는 자살 위험성에 대한 위험도 지표(indicator)이며 예측변인(predictor)이 아님에 유의해주십시오.</em>
+				</div>
+				<div class="innerWrap">
+					<div class="chartArea">
+						<div class="tab-Item">
+							<div class="color-blue1"><strong>자가평가형</strong></div>
+							<div class="btn-wrap-inline top" id="chartChange">
+								<a class="btn-type-sm round on" href="#lineChartWrap" title="꺽은 선 차트">꺽은 선</a>
+								<a class="btn-type-sm round" href="#barChartWrap" title="막대 차트">막대</a>
+							</div>
+						</div>
+						<div class="wrapChart">
+							<div style="width:634px; height:353px;" class="chart-layer" id="lineChartWrap">
+							  	<canvas id="lineChart" class="chartList"></canvas>
+							</div>
+							<div style="width:634px; height:353px;" class="chart-layer" id="barChartWrap">
+							  	<canvas id="barChart" class="chartList"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="table-style-sm">
+						<div class="caption inline top"><em class="xs">점수 범위:29~116점</em></div>
+						<table>
+							<caption>자살 위험도 자가 평가도구(평가날짜, 점수)</caption>
+							<colgroup>
+								<col style="width:50%;"/>
+								<col style="width:auto;"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">평가날짜</th>
+									<th scope="col">점수</th>
+								</tr>
+							</thead>
+							<tfoot></tfoot>
+							<tbody>
+								<tr>
+									<td>2021-01-05</td>
+									<td><strong class="color-blue1">85</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-06</td>
+									<td><strong class="color-blue1">75</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-07</td>
+									<td><strong class="color-blue1">83</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-08</td>
+									<td><strong class="color-blue1">92</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-09</td>
+									<td><strong class="color-blue1">92</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-10</td>
+									<td><strong class="color-blue1">68</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-11</td>
+									<td><strong class="color-blue1">68</strong>점</td>
+								</tr>
+								<tr>
+									<td>2021-01-12</td>
+									<td><strong class="color-blue1">68</strong>점</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

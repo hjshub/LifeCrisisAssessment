@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 위험도 평가 면담도구 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>자살 위험도 평가 면담도구</h2>
+			</div>
+		</div>
+		<div class="container">
+			<section class="interview A3">
+				<div>
+					<h3>
+						<span>A3</span>
+						<p><strong>자살행동</strong><br/><em>현재 삽화를 조사하십시오.</em></p>
+					</h3>
+					<div>
+						<dl>
+							<dt><strong>a.</strong>자살을 시도한 적이 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="a_opt1" type="radio" name="A3_a">
+												<label for="a_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a_opt2" type="radio" name="A3_a">
+												<label for="a_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<div>
+							시도가 있는 경우 <strong>(A3 a = &lsquo;예&rsquo;) : A3 a1</strong>을 실시하십시오. <strong>&lsquo;아니오&rsquo;</strong>일 경우 : <strong>A4</strong>로 넘어가십시오.
+						</div>
+					</div>
+					<div>
+						<dl class="len02">
+							<dt><strong>a<em> - 1</em>.</strong>자살 시도는 다음 중 어느 것에 해당합니까? <em class="color-blue1">(자세한 면담 요망)</em></dt>
+							<dd>
+								<div class="radio-group col-1">
+									<ul>
+										<li>
+											<span>
+												<input id="a-1_opt1" type="radio" name="A3_a-1">
+												<label for="a-1_opt1">1. 시도 준비만 함 <em class="color-blue4">(예: 약을 구매하거나 칼을 사는 등 구체적 행동)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a-1_opt2" type="radio" name="A3_a-1">
+												<label for="a-1_opt2">2. 시도 직전 자의로 중단</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a-1_opt3" type="radio" name="A3_a-1">
+												<label for="a-1_opt3">3. 시도 직전 타인의 방해로 중단 <em class="color-blue4">(예: 약을 먹으려는 데 제지 당함)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a-1_opt4" type="radio" name="A3_a-1">
+												<label for="a-1_opt4">4. 시도함</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>b.</strong>자살 시도 상황을 가장 잘 나타내는 것은 어느 것입니까?</dt>
+							<dd>
+								<div class="radio-group col-1">
+									<ul>
+										<li>
+											<span>
+												<input id="b_opt1" type="radio" name="A3_b">
+												<label for="b_opt1">1. 나는 단지 도움이 필요해서 그랬지, 실제 죽을 생각은 없었다.</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="b_opt2" type="radio" name="A3_b">
+												<label for="b_opt2">2. 나는 죽으려 시도했지만, 죽기에 확실한 방법이 아니라는 것을 알고 있었다.</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="b_opt3" type="radio" name="A3_b">
+												<label for="b_opt3">3. 나는 진짜 죽으려고 했으나, 실패해서 다행이라고 생각한다.</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="b_opt4" type="radio" name="A3_b">
+												<label for="b_opt4">4. 나는 진짜 죽으려고 했으며, 살아있어서 고통스럽다.</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>c.</strong>어떤 방법으로 자살을 시도했습니까? <em class="color-blue1">(세부항목을 기재하십시오)</em></dt>
+							<dd>
+								<div class="radio-group col-2-1">
+									<ul>
+										<li>
+											<span>
+												<input id="c_opt1" type="radio" name="A3_c">
+												<label for="c_opt1">1. 약 <em class="color-blue4">(수면제, 진통제 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt2" type="radio" name="A3_c">
+												<label for="c_opt2">2. 화학약품 <em class="color-blue4">(농약, 살충제 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt3" type="radio" name="A3_c">
+												<label for="c_opt3">3. 의사 <em class="color-blue4">(목맴)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt4" type="radio" name="A3_c">
+												<label for="c_opt4">4. 띄어내림 <em class="color-blue4">(아파트, 강 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt5" type="radio" name="A3_c">
+												<label for="c_opt5">5. 칼 등 무기 <em class="color-blue4">(손목 긋기, 총기류 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt6" type="radio" name="A3_c">
+												<label for="c_opt6">6. 교통수단 <em class="color-blue4">(운전, 차도에 뛰어듬 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt7" type="radio" name="A3_c">
+												<label for="c_opt7">7. 질식 <em class="color-blue4">(가스질식, 번개탄 등)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt8" type="radio" name="A3_c">
+												<label for="c_opt8">8. 기타</label>
+											</span>
+											<span><input class="line" type="text"></span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>d.</strong>자살 시도가 얼마나 치명적이었습니까?</dt>
+							<dd>
+								<div class="radio-group col-2-1">
+									<ul>
+										<li>
+											<span>
+												<input id="d_opt1" type="radio" name="A3_d">
+												<label for="d_opt1">1. 신체적 손상 없음</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d_opt2" type="radio" name="A3_d">
+												<label for="d_opt2">2. 경미함 <em class="color-blue4">(찰과상)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d_opt3" type="radio" name="A3_d">
+												<label for="d_opt3">3. 보통 <em class="color-blue4">(의학적 주의 필요)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d_opt4" type="radio" name="A3_d">
+												<label for="d_opt4">4. 다소 심각함 <em class="color-blue4">(통원가능)</em></label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d_opt5" type="radio" name="A3_d">
+												<label for="d_opt5">5. 심각함 <em class="color-blue4">(입원필요)</em></label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<div>자살 시도 결과 손상없는 경우 <strong>(A3 d = &lsquo;1&rsquo;) : A3 d-1</strong>을 실시하십시오. <strong>&lsquo;아니오&rsquo;일 경우 : A3 e</strong>로 넘어가십시오.</div>
+					</div>
+					<div>
+						<dl class="len02">
+							<dt><strong>d<em> - 1</em>.</strong>자살 시도가 원래 계획대로 이루어졌다면 얼마나 치명적이라 예상됩니까?</dt>
+							<dd>
+								<div class="radio-group col-1">
+									<ul>
+										<li>
+											<span>
+												<input id="d-1_opt1" type="radio" name="A3_d-1">
+												<label for="d-1_opt1">1. 손상을 야기하지 않음</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d-1_opt2" type="radio" name="A3_d-1">
+												<label for="d-1_opt2">2. 손상을 야기하나 사망에 이르지 않음</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d-1_opt3" type="radio" name="A3_d-1">
+												<label for="d-1_opt3">3. 사망에 이를 수 있음</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>e.</strong>자살 시도 후 다른 사람에게 알렸습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="e_opt1" type="radio" name="A3_e">
+												<label for="e_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="e_opt2" type="radio" name="A3_e">
+												<label for="e_opt2">아니오</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>f.</strong>자살 시도 후 정신건강 관련 기관에서 치료를 받았습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="f_opt1" type="radio" name="A3_f">
+												<label for="f_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="f_opt2" type="radio" name="A3_f">
+												<label for="f_opt2">아니오</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="table">
+						<dl>
+							<dt><strong>g.</strong>평생 자살 시도 횟수</dt>
+							<dd>
+								<div class="input xs innerWrap">
+									<div class="form-line">
+										<span>총: <input type="text" title="평생 자살 시도 횟수" />회</span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="table">
+						<dl>
+							<dt><strong>h.</strong>평생 자해시도 횟수</dt>
+							<dd>
+								<div class="input xs innerWrap">
+									<div class="form-line">
+										<span>총: <input type="text" title="평생 자해시도 횟수" />회</span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="result">
+					<div>
+						<h4><span>A3-1.</span> 자살 행동의 심각도 평가</h4>
+						<p class="etc"><em>&#8251;</em> 아래 권고 기준에 따르되,  A3의 정보를 통합하여 평가자가 최종적으로 판단하십시오.</p>
+						<p>권고 기준에 따르면, 평가대상자의 자살 생각이나 자살 충동의 심각도는 <em class="color-blue1">중증도</em>입니다.</p>
+						<div class="form-group">
+							<b>평가자가 최종적으로 판단한 자살 행동의 심각도는</b>
+							<span class="customed-select">
+								<label for="score"><em class="hiddenTxt">분류</em></label>
+								<select id="score">
+									<option value="">고도</option>
+									<option value="">중등도</option>
+									<option value="">경도</option>
+								</select>
+							</span>
+							<b>입니다.</b>
+						</div>
+					</div>
+					<div class="flow--chart innerWrap">
+						<div>
+							<ol>
+								<li>a-1=&lsquo;4&rsquo;인 경우</li>
+								<li>d=&lsquo;4&rsquo; 또는 &lsquo;5&rsquo; → <em class="color-blue1">고도</em></li>
+								<li>d=&lsquo;3&rsquo; → <em class="color-blue1">중등도</em></li>
+								<li>d=&lsquo;1&rsquo; 또는 &lsquo;2&rsquo; → <em class="color-blue1">경도</em></li>
+							</ol>
+							<ol>
+								<li>a-1=&lsquo;1~3&rsquo;인 경우</li>
+								<li>d-1=&lsquo;3&rsquo; → <em class="color-blue1">고도</em></li>
+								<li>d-1=&lsquo;2&rsquo; → <em class="color-blue1">중등도</em></li>
+								<li>d-1=&lsquo;1&rsquo; → <em class="color-blue1">경도</em></li>
+							</ol>
+						</div>
+						<div class="thumnail">
+							<img src="../asset/img/bg/bg_flowchart02.png" alt="순서도"/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="btn-wrap innerWrap">
+				<button type="button" class="btn-type-md btn-type-skyblue prev"><span>이전단계</span></button>
+				<button type="button" class="btn-type-md btn-type-blue next"><span>다음단계</span></button>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+	<script>
+		$(function(){
+			var listA3 = $('#wrapper section.A3 > div').get();
+
+			if($('#a_opt1').prop('checked')){ // 페이지 로드 시 A3-a 항목 '예' 일 경우
+				$(listA3[0]).find('> div').not(':first-of-type').css('display','block');
+				$(listA3[1]).css('display','block');
+			}
+
+			$('input[name=A3_a]').on('change', function(){
+				var trg = $(this);
+
+				if($('#a_opt1').prop('checked')){ // A3-a 항목 '예' 일 경우
+					$(listA3[0]).find('> div').not(trg.parents('div')).stop().fadeIn(200);
+					$(listA3[1]).stop().fadeIn(200);
+
+				}else if($('#a_opt2').prop('checked')){ // A3-a 항목 '아니오' 일 경우
+					$(listA3[0]).find('> div').not(trg.parents('div')).stop().fadeOut(200);
+					$(listA3[1]).stop().fadeOut(200);
+				}
+			});
+
+			var trg_ = $('#c_opt8');
+
+			if(!trg_.prop('checked')){ // 페이지 로드 시 A3-c 문항의 8.기타 항목이 체크되있을 경우
+				trg_.closest('li').find('.line').attr('readonly',true);
+			}
+
+			$('input[name=A3_c]').on('change', function(){
+				if(trg_.prop('checked')){ // A3-c 문항의 8.기타 항목을 체크 시
+					trg_.closest('li').find('.line').removeAttr('readonly');
+				}else { // A3-c 문항의 8.기타 항목 이외 항목 체크 시
+					trg_.closest('li').find('.line').val('').attr('readonly',true);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

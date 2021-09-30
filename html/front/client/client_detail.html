@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>평가대상자 상세정보 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="infoTxt"><strong class="color-blue4">홍길동</strong>님, 안녕하세요!</span>
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2>평가대상자 상세정보</h2>
+				<div class="table-layout">
+					<div class="col">
+						<dl>
+							<dt><span>Subject#</span></dt>
+							<dd><strong class="color-blue1">S101</strong></dd>
+							<dt><span>Subject ID</span></dt>
+							<dd><em class="xs color-blue1">2021-P0011-S101</em></dd>
+							<dt><span>평가 시작일</span></dt>
+							<dd><em class="xs">2021-01-05</em><em class="xs">13:20</em></dd>
+							<dt><span>최종 평가일</span></dt>
+							<dd><em class="xs">2021-01-08</em><em class="xs">13:20</em></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn-type-icon print" type="button" onclick="$funcCommon().printPreview();">전체 리포트 출력</button>
+					<button class="btn-type-icon report" type="button">추가 평가 진행</button>
+				</div>
+			</section>	
+			<section>
+				<h2>동의서 및 기본정보</h2>
+				<div class="table-style01">
+					<table>
+						<caption>동의서 및 기본정보(항목명, 최종생성일)</caption>
+						<colgroup>
+							<col style="width:6%;"/>
+							<col style="width:30%;"/>
+							<col style="width:30%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="chk-group">
+										<span>
+											<input id="allChk_aa" name="allChk_aa" type="checkbox"/>
+											<label for="allChk_aa"><em class="hiddenTxt">전체</em></label>
+										</span>
+									</div>	
+								</th>
+								<th scope="col">항목명</th>
+								<th scope="col">일시</th>
+								<th scope="col">철회사유</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="aa_01" name="aa_01" type="checkbox"/>
+											<label for="aa_01"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td><a href="../information/withdrawal.html">평가동의서</a></td>
+								<td>2021-01-05 13:20</td>
+								<td rowspan="3" class="break"><span>S101대상자 철회요청</span><br/><em class="color-blue1">(2021.06.18)</em></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="aa_02" name="aa_02" type="checkbox"/>
+											<label for="aa_02"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td><a href="../information/demography.html">인구통계학</a></td>
+								<td>2021-01-07 13:00</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="aa_03" name="aa_03" type="checkbox"/>
+											<label for="aa_03"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td><a href="../information/medical_history.html">의학적&#47;정신과적 병력</a></td>
+								<td>2021-01-08 13:20</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap">
+					<div class="description inline top">
+						<em>철회를 원하시면 평가동의서 상세페이지에서 진행부탁드립니다.</em>
+					</div>
+					<button type="button" class="btn-type-icon print" onclick="$funcCommon().printPreview();">선택 항목 출력</button>
+				</div>
+			</section>
+			<section>
+				<h2><em>평가결과</em>&nbsp;&nbsp;<a class="btn-type-xs btn-type-blue" href="../report/result.html">평가결과보기</a></h2>
+				<div class="form-group detail">
+					<div>
+						<span class="customed-select">
+							<label for="search"><em class="hiddenTxt">항목명</em></label>
+							<select id="search">
+								<option value="">항목명</option>
+								<option value="">자가평가형</option>
+								<option value="">관찰자 평가형</option>
+								<option value="">면담도구형</option>
+							</select>
+						</span>
+						<span class="customed-select">
+							<label for="search"><em class="hiddenTxt">기간</em></label>
+							<select id="search">
+								<option value="">전체기간</option>
+								<option value="">평가시작일</option>
+								<option value="">최종평가일</option>
+							</select>
+						</span>
+					</div>
+					<div class="calendar">
+						<span>
+							<label for="startDate" class="hiddenTxt"><em>시작날짜선택</em></label>
+							<input class="date" id="startDate" type="text" autocomplete="off" readonly />
+						</span>
+						<span class="auto">-</span>
+						<span>
+							<label for="endDate" class="hiddenTxt"><em>종료날짜선택</em></label>
+							<input class="date" id="endDate" type="text" autocomplete="off" readonly />
+						</span>
+						<span class="auto btn"><button type="button" class="btn-type-skyblue btn-type-sm">검색</button></span>
+					</div>
+				</div>
+				<div class="table-style02">
+					<table>
+						<caption>평가결과(항목명, 평가 여부, 평가시작일, 최종평가일)</caption>
+						<colgroup>
+							<col style="width:6%;"/>
+							<col style="width:25%;"/>
+							<col style="width:11%;"/>
+							<col style="width:29%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="chk-group">
+										<span>
+											<input id="allChk_b" name="allChk_b" type="checkbox"/>
+											<label for="allChk_b"><em class="hiddenTxt">전체</em></label>
+										</span>
+									</div>	
+								</th>
+								<th scope="col">항목명</th>
+								<th scope="col">평가 여부</th>
+								<th scope="col">평가시작일</th>
+								<th scope="col">최종평가일</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="b_01" name="b_01" type="checkbox"/>
+											<label for="b_01"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>자가평가형_02</td>
+								<td><em class="color-blue1">평가중</em></td>
+								<td>2021-01-03 12:30</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="b_02" name="b_02" type="checkbox"/>
+											<label for="b_02"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>관찰자 평가형_02</td>
+								<td><em>완료</em></td>
+								<td>2021-01-06 09:30</td>
+								<td>2021-01-07 13:20</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="b_03" name="b_03" type="checkbox"/>
+											<label for="b_03"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>면담도구형_01</td>
+								<td><em>완료</em></td>
+								<td>2021-01-03 12:30</td>
+								<td>2021-01-05 13:20</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn-type-icon print" onclick="$funcCommon().printPreview();">선택 항목 출력</button>
+					<button type="button" class="btn-type-icon delete">선택 항목 삭제</button>
+				</div>
+			</section>
+			<div class="paging">
+				<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+				<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+				<ul>
+					<li class="selected"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+				<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+				<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

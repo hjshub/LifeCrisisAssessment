@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 위험도 평가 면담도구 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>자살 위험도 평가 면담도구</h2>
+			</div>
+		</div>
+		<div class="container">
+			<section class="interview A4">
+				<div>
+					<h3>
+						<span>A4</span>
+						<p><strong>스트레스 사건</strong><br/><em>현재 삽화를 조사하십시오.</em></p>
+					</h3>
+					<div>
+						<dl>
+							<dt><strong>a.</strong>직장에서 해고 당하거나 취업에 실패하는 등 직장 문제가 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="a_opt1" type="radio" name="A4_a">
+												<label for="a_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a_opt2" type="radio" name="A4_a">
+												<label for="a_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>b.</strong>직장이나 학교에서 부당한 대우나 괴롭힘을 당하고 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="b_opt1" type="radio" name="A4_b">
+												<label for="b_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="b_opt2" type="radio" name="A4_b">
+												<label for="b_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>c.</strong>감당하기 힘든 빚을 지거나 생활고에 시달리는 등 경제적 문제가 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="c_opt1" type="radio" name="A4_c">
+												<label for="c_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="c_opt2" type="radio" name="A4_c">
+												<label for="c_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>d.</strong>몹시 고통스럽거나 일상 생활에 지장을 초래하는 신체적 질병이 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="d_opt1" type="radio" name="A4_d">
+												<label for="d_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="d_opt2" type="radio" name="A4_d">
+												<label for="d_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>e.</strong>부부간 또는 연인간 갈등으로 이혼(별거)하거나 이별하였습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="e_opt1" type="radio" name="A4_e">
+												<label for="e_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="e_opt2" type="radio" name="A4_e">
+												<label for="e_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>f.</strong>대인관계가 거의 없어 고립되거나 몹시 고독합니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="f_opt1" type="radio" name="A4_f">
+												<label for="f_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="f_opt2" type="radio" name="A4_f">
+												<label for="f_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>g.</strong>몹시 고통스러운 가족간 불화가 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="g_opt1" type="radio" name="A4_g">
+												<label for="g_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="g_opt2" type="radio" name="A4_g">
+												<label for="g_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>h.</strong>배우자나 자녀, 부모, 반려동물 등 친밀한 대상과 사별하였습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="h_opt1" type="radio" name="A4_h">
+												<label for="h_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="h_opt2" type="radio" name="A4_h">
+												<label for="h_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>i.</strong>몹시 모욕적인 상황을 경험하였습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="i_opt1" type="radio" name="A4_i">
+												<label for="i_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="i_opt2" type="radio" name="A4_i">
+												<label for="i_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>j.</strong>심한 폭행이나 성폭행을 당하였습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="j_opt1" type="radio" name="A4_j">
+												<label for="j_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="j_opt2" type="radio" name="A4_j">
+												<label for="j_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>k.</strong>재판이나 경찰 조사 등 법적 문제를 겪고 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="k_opt1" type="radio" name="A4_k">
+												<label for="k_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="k_opt2" type="radio" name="A4_k">
+												<label for="k_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl>
+							<dt><strong>l.</strong>기타 스트레스 사건이 있다면 기술해주십시오.</dt>
+							<dd>
+								<div class="input wide innerWrap">
+									<div class="form-line">
+										<span>
+											<textarea></textarea>
+										</span>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<dl class="len03">
+							<dt><strong>A4-1</strong>A4에서 1개 이상이 &lsquo;예&rsquo;입니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="A4_1_opt1" type="radio" name="A4_1">
+												<label for="A4_1_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="A4_1_opt2" type="radio" name="A4_1">
+												<label for="A4_1_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl class="len03">
+							<dt><strong>A4-2</strong>스트레스 사건들이 당신의 직업, 사회생활, 또는 그 외의 중요한 영역에 있어 현저한 괴로움을 주거나 기능저하를 초래했습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="A4_2_opt1" type="radio" name="A4_2">
+												<label for="A4_2_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="A4_2_opt2" type="radio" name="A4_2">
+												<label for="A4_2_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<dl class="len03">
+							<dt><strong>A4-3</strong>그렇다면 심각도는 어느 정도입니까? <em class="color-blue1">(A4의 정보를 통합하여 평가자가 최종적으로 판단하십시오.)</em></dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="A4_3_opt1" type="radio" name="A4_3">
+												<label for="A4_3_opt1">경도</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="A4_3_opt2" type="radio" name="A4_3">
+												<label for="A4_3_opt2">중증도</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="A4_3_opt3" type="radio" name="A4_3">
+												<label for="A4_3_opt3">고도</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+			<div class="btn-wrap innerWrap">
+				<button type="button" class="btn-type-md btn-type-skyblue prev"><span>이전단계</span></button>
+				<button type="button" class="btn-type-md btn-type-blue next"><span>다음단계</span></button>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>보건복지부 생명위기 평가도구 Admin</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../asset/css/style.css">
+
+</head>
+<body>
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<ul>
+					<li><a href="#">로그아웃</a></li>
+					<li><a href="#">평가도구 바로가기</a></li>
+				</ul>
+			</div>
+		</div>	
+		<div class="gnb">
+			<div class="container">
+				<ul>
+					<li><a href="../result/CounselResult.html">평가결과</a></li>
+					<li><a href="../counselor/CounselorList.html">평가자관리</a></li>
+					<li><a href="../agency/AgencyManagement.html">기관관리</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2>기관 관리</h2>
+				<div class="table-layout">
+					<div class="row">
+						<dl>
+							<dt class="ls"><span>검색</span></dt>
+							<dd>
+								<div class="form-group">
+									<span class="customed-select">
+										<label for="search"><em class="hiddenTxt">분류</em></label>
+										<select id="search">
+											<option value="">전체</option>
+											<option value="">기관명</option>
+											<option value="">내용</option>
+										</select>
+									</span>
+									<span class="xlg">
+										<label for="searchArea" class="hiddenTxt"><em>검색</em></label>
+										<input id="searchArea" type="text" placeholder="검색어를 입력하세요." autocomplete="off" />
+									</span>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn-type-skyblue">검색</button>
+				</div>
+			</section>	
+			<section>
+				<h2>기관리스트</h2>
+				<div class="btn-wrap-inline top"><a href="javascript:void(0);" class="btn-type-add" onclick="$funcCommon().openPop('regist');">기관등록</a></div>
+				<div class="table-style01">
+					<table>
+						<caption>기관리스트(NO, 기관명, 기관주소, 기관전화번호, 기관홈페이지)</caption>
+						<colgroup>
+							<col style="width:5%;"/>
+							<col style="width:6%;"/>
+							<col style="width:25%;"/>
+							<col style="width:auto;"/>
+							<col style="width:15%;"/>
+							<col style="width:15%;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="chk-group">
+										<span>
+											<input id="allChk_Ag" name="allChk_Ag" type="checkbox"/>
+											<label for="allChk_Ag"><em class="hiddenTxt">전체</em></label>
+										</span>
+									</div>	
+								</th>
+								<th scope="col">NO</th>
+								<th scope="col">기관명</th>
+								<th scope="col">기관주소</th>
+								<th scope="col">기관전화번호</th>
+								<th scope="col">기관홈페이지</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Ag_01" name="Ag_01" type="checkbox"/>
+											<label for="Ag_01"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>30</td>
+								<td class="break"><a href="javascript:void(0);" onclick="$funcCommon().openPop('modify');">서대문구정신건강복지센터</a></td>
+								<td>서울특별시 서대문구 연희로 290 서대문구보건소별관 우리들 4층</td>
+								<td>02-3140-8081</td>
+								<td><a class="dir-link" href="http://www.sdm.go.kr/health/contents/dementia/improve" target="_blank">바로가기</a></td>
+							</tr>
+							<tr class="disabled">
+								<td></td>
+								<td>29</td>
+								<td class="break">은평구정신건강복지센터</td>
+								<td>서울특별시 은평구 연서로 34길 11 불광보건소 3층</td>
+								<td>02-3140-8081</td>
+								<td><a class="dir-link" href="http://health.ep.go.kr/CmsWeb/viewPage.req?idx=PG00000036" target="_blank">바로가기</a></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Ag_02" name="Ag_02" type="checkbox"/>
+											<label for="Ag_02"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>28</td>
+								<td class="break"><a href="javascript:void(0);" onclick="$funcCommon().openPop('modify');">중구정신건강복지센터</a></td>
+								<td>서울특별시 중구 서소문로 6길 16 중립종합복지센터 3층</td>
+								<td>-</td>
+								<td><a class="dir-link" href="http://www.junggumind.or.kr/" target="_blank">바로가기</a></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Ag_03" name="Ag_03" type="checkbox"/>
+											<label for="Ag_03"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>27</td>
+								<td class="break"><a href="javascript:void(0);" onclick="$funcCommon().openPop('modify');">중앙자살예방센터</a></td>
+								<td>서울특별시 중구 울지로 6 재능빌딩 11층</td>
+								<td>02-3140-8081</td>
+								<td><a class="dir-link" href="http://www.spckorea.or.kr/" target="_blank">바로가기</a></td>
+							</tr>
+							<tr class="disabled">
+								<td></td>
+								<td>26</td>
+								<td class="break">강동구정신건강복지센터</td>
+								<td>서울특별시 강동구 성내로 45, 강동구보건소 1층(성내동)</td>
+								<td>02-3140-8081</td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="chk-group">
+										<span>
+											<input id="Ag_04" name="Ag_04" type="checkbox"/>
+											<label for="Ag_04"><em class="hiddenTxt">선택</em></label>
+										</span>
+									</div>
+								</td>
+								<td>25</td>
+								<td class="break"><a href="javascript:void(0);" onclick="$funcCommon().openPop('modify');">삼성서울병원</a></td>
+								<td>서울시 중구 을지로 재능빌딩 11층</td>
+								<td>02-3140-8081</td>
+								<td><a class="dir-link" href="http://www.spckorea.or.kr/sub.php?menukey=28" target="_blank">바로가기</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn-wrap-inline bottom">
+					<button type="button" class="btn-type-default">삭제</button>
+				</div>
+				<div class="paging">
+					<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+					<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+					<ul>
+						<li class="selected"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+					<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+					<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+
+	<!-- 레이어 팝업(기관등록)-->
+	<div class="lpop" id="regist">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-body">
+			<h2>기관등록</h2>
+			<div class="table-layout-lpop">
+				<div class="row">
+					<dl>
+						<dt><span>기관명</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관명을 입력하세요." title="기관명" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관주소</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관주소를 입력하세요." title="기관주소" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관홈페이지</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관홈페이지를 입력하세요." title="기관홈페이지" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관전화번호</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관전화번호를 입력하세요." title="기관전화번호" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>좌표</span></dt>
+						<dd class="table-row">
+							<div class="form-group">
+								<span>
+									<label for="">경도 : </label>
+									<input type="text" id="" placeholder="경도를 입력하세요." title="좌표(경도)" autocomplete="off" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span>
+									<label for="">위도 : </label>
+									<input type="text" id="" placeholder="위도를 입력하세요." title="좌표(위도)" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn-type-blue btn-regist">등록</button>
+		</div>
+	</div>
+
+	<!-- 레이어 팝업(기관수정)-->
+	<div class="lpop" id="modify">
+		<button type="button" class="lpop-close"><img src="../asset/img/icon/ico_close.png" alt="레이어 팝업 닫기"></button>
+		<div class="pop-body">
+			<h2>기관수정</h2>
+			<div class="table-layout-lpop">
+				<div class="row">
+					<dl>
+						<dt><span>기관명</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관명을 입력하세요." title="기관명" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관주소</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관주소를 입력하세요." title="기관주소" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관홈페이지</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관홈페이지를 입력하세요." title="기관홈페이지" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>기관전화번호</span></dt>
+						<dd>
+							<div class="form-group">
+								<span>
+									<input type="text" id="" placeholder="기관전화번호를 입력하세요." title="기관전화번호" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="row">
+					<dl>
+						<dt><span>좌표</span></dt>
+						<dd class="table-row">
+							<div class="form-group">
+								<span>
+									<label for="">경도 : </label>
+									<input type="text" id="" placeholder="경도를 입력하세요." title="좌표(경도)" autocomplete="off" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span>
+									<label for="">위도 : </label>
+									<input type="text" id="" placeholder="위도를 입력하세요." title="좌표(위도)" autocomplete="off" />
+								</span>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn-type-blue btn-modify">수정</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>상담 센터 찾기 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="location">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>상담 센터 찾기<br/> <em>나와 가까운 상담센터를 검색하세요.</em></h2>
+			</div>
+		</div>
+		<div class="container">
+			<section>
+				<div class="search-map">
+					<div>
+						<button id="btn-searchMap"><em>검색</em></button>
+						<div id="searchAgency">
+							<div>
+								<dl>
+									<dt>전체검색</dt>
+									<dd>
+										<div class="form-group area">
+											<span class="customed-select">
+												<label for="search"><em class="hiddenTxt">지역 선택</em></label>
+												<select id="search">
+													<option value="">지역을 선택해 주세요.</option>
+													<option value="">서울</option>
+													<option value="">경기</option>
+													<option value="">강원도</option>
+													<option value="">전라도</option>
+													<option value="">경상도</option>
+												</select>
+											</span>
+										</div>
+									</dd>
+									<dd>
+										<div class="form-group search">
+											<span><input type="text" placeholder="검색어를 입력하세요."></span>
+											<span><button type="button" class="btn-type-skyblue">검색</button></span>
+										</div>
+										
+										<div class="search--result">
+											<!-- 검색결과 : 검색, 기관명 선택 시 추가되는 리스트 -->
+											<ul>
+												<li>중앙자살예방센터</li>
+												<li>서울시정신건강복지센터</li>
+												<li>서울시자살예방센터</li>
+												<li>성북구자살예방센터</li>
+												<li>강남구정신건강복지센터</li>
+												<li>강동구정신건강복지센터</li>
+												<li>강북구정신건강복지센터</li>
+												<li>강서구정신건강복지센터</li>
+												<li>관악구정신건강복지센터</li>
+												<li>광진구정신건강복지센터</li>
+												<li>중앙자살예방센터</li>
+												<li>서울시정신건강복지센터</li>
+												<li>서울시자살예방센터</li>
+												<li>성북구자살예방센터</li>
+												<li>강남구정신건강복지센터</li>
+												<li>강동구정신건강복지센터</li>
+												<li>강북구정신건강복지센터</li>
+												<li>강서구정신건강복지센터</li>
+												<li>관악구정신건강복지센터</li>
+												<li>광진구정신건강복지센터</li>
+											</ul>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 지도 노출 영역 -->
+					<div class="map--area">
+						<img src="../asset/img/bg/bg_map_sample.jpg" alt="지도 이미지 샘플" />
+
+						<!-- tooltip sample01 -->
+						<div class="map--tooltip" style="position:absolute; top:290px; left:679px;">
+							<a class="map--picker" href="javascript:void(0);"><em class="hiddenTxt">지역 선택</em><img src="../asset/img/icon/ico_picker.png" alt="지역 선택"></a>
+							<div>
+								<strong>중앙자살예방센터&nbsp;<em><a href="#"><img src="../asset/img/icon/ico_home.png" style="width:13px; height:13px;" alt="home" /></a></em></strong>
+								<span>서울특별시 중구 을지로 6 재능빌딩 11층<br/>02-2203-0053</span>
+							</div>
+						</div>
+
+						<!-- tooltip sample02 -->
+						<div class="map--tooltip" style="position:absolute; top:300px; left:700px;">
+							<a class="map--picker" href="javascript:void(0);"><em class="hiddenTxt">지역 선택</em><img src="../asset/img/icon/ico_picker.png" alt="지역 선택"></a>
+							<div>
+								<strong>서울시정신건강복지센터&nbsp;<em><img src="../asset/img/icon/ico_home.png" style="width:13px; height:13px;" alt="home" /></em></strong>
+								<span>서울특별시 중구 을지로 6 재능빌딩 11층<br/>02-2203-0053</span>
+							</div>
+						</div>
+
+						<!-- tooltip sample03 -->
+						<div class="map--tooltip" style="position:absolute; top:310px; left:660px;">
+							<a class="map--picker" href="javascript:void(0);"><em class="hiddenTxt">지역 선택</em><img src="../asset/img/icon/ico_picker.png" alt="지역 선택"></a>
+							<div>
+								<strong>서울시자살예방센터&nbsp;<em><img src="../asset/img/icon/ico_home.png" style="width:13px; height:13px;" alt="home" /></em></strong>
+								<span>서울특별시 중구 을지로 6 재능빌딩 11층<br/>02-2203-0053</span>
+							</div>
+						</div>
+
+						<!-- tooltip sample04 -->
+						<div class="map--tooltip" style="position:absolute; top:330px; left:679px;">
+							<a class="map--picker" href="javascript:void(0);"><em class="hiddenTxt">지역 선택</em><img src="../asset/img/icon/ico_picker.png" alt="지역 선택"></a>
+							<div>
+								<strong>성북구자살예방센터&nbsp;<em><img src="../asset/img/icon/ico_home.png" style="width:13px; height:13px;" alt="home" /></em></strong>
+								<span>서울특별시 중구 을지로 6 재능빌딩 11층<br/>02-2203-0053</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="help">
+						<dl>
+							<dt><strong class="color-blue1">도움정보</strong></dt>
+							<dd>
+								<p>우울감 등 말하기 어려운 고민으로 전문가의 도움이 필요한 경우에는 아래의 전화번호로 전화하면 24시간 전문가의 상담을 받을 수 있습니다.</p>
+								<ul>
+									<li>자살예방 핫라인 : <a href="tel:1577-0199"><b class="color-blue1">1577-0199</b></a></li>
+									<li>희망의 전화 : <a href="tel:129"><em class="color-blue1">129</em></a></li>
+									<li>생명의 전화 : <a href="tel:1588-9191"><em class="color-blue1">1588-9191</em></a></li>
+									<li>청소년 전화 : <a href="tel:1388"><em class="color-blue1">1388</em></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+	<script>
+		$(function(){
+			$('.map--picker').each(function(){
+				var mapTrg = $(this),
+					mapInfo = mapTrg.next('div');
+
+				mapTrg.on('click', function(e){
+					e.preventDefault();
+					e.stopPropagation();
+
+					if(mapInfo.css('display') == 'none'){
+						$('.map--picker').next('div').stop().fadeOut(200);
+						mapInfo.stop().fadeIn(200);
+					}else {
+						mapInfo.stop().fadeOut(200);
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

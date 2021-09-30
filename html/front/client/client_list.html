@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>평가대상자 명단 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="infoTxt"><strong class="color-blue4">홍길동</strong>님, 안녕하세요!</span>
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper">
+		<div class="container">
+			<section>
+				<h2>평가대상자 명단</h2>
+				<div class="caption">
+					<em><b class="color-bk">Subject#</b>를 클릭하시면 대상자별 관리 페이지로 이동합니다.</em>
+				</div>
+				<div class="form-group inline">
+					<div>
+						<span class="customed-select">
+							<label for="search"><em class="hiddenTxt">분류</em></label>
+							<!-- 2021.06.01 옵션 변경 -->
+							<select id="search">
+								<option value="">전체기간</option>
+								<option value="">평가시작일</option>
+								<option value="">최종평가일</option>
+							</select>
+						</span>
+					</div>
+					<div class="calendar">
+						<span>
+							<label for="startDate" class="hiddenTxt"><em>시작날짜선택</em></label>
+							<input class="date" id="startDate" type="text" autocomplete="off" readonly />
+						</span>
+						<span class="auto">-</span>
+						<span>
+							<label for="endDate" class="hiddenTxt"><em>종료날짜선택</em></label>
+							<input class="date" id="endDate" type="text" autocomplete="off" readonly />
+						</span>
+					</div>
+				</div>
+				<div class="form-group inline search">
+					<div><span><input type="text" placeholder="검색어를 입력하세요."></span></div>
+					<div><span class="auto btn"><button type="button" class="btn-type-skyblue btn-type-sm">검색</button></span></div>
+				</div>
+				<div class="table-style03 sortWrap">
+					<table>
+						<caption>평가대상자 명단(Subject#, 평가시작일, 최종평가일)</caption>
+						<colgroup>
+							<col style="width:33%;"/>
+							<col style="width:33%;"/>
+							<col style="width:auto;"/>
+						</colgroup>
+						<thead>
+							<tr>
+								<!-- 2021.06.01 정렬 버튼 추가 -->
+								<th scope="col"><div>Subject# <button class="sort" type="button"><em class="hiddenTxt">등록순</em></button></div></th>
+								<th scope="col"><div>평가시작일 <button class="sort asc" type="button"><em class="hiddenTxt">오름차순</em></button></div></th>
+								<th scope="col"><div>최종평가일 <button class="sort desc" type="button"><em class="hiddenTxt">내림차순</em></button></div></th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr class="disabled">
+								<td><a href="client_detail.html">S102</a></td>
+								<td>2021-01-07 12:30</td>
+								<td>2021-03-03 12:30</td>
+							</tr>
+							<tr>
+								<td><a href="client_detail.html">S103</a></td>
+								<td>2021-01-06 12:30</td>
+								<td>2021-04-03 12:30</td>
+							</tr>
+							<tr>
+								<td><a href="client_detail.html">S104</a></td>
+								<td>2021-01-05 12:30</td>
+								<td>2021-03-05 12:30</td>
+							</tr>
+							<tr>
+								<td><a href="client_detail.html">S105</a></td>
+								<td>2021-01-05 12:30</td>
+								<td>2021-03-09 12:30</td>
+							</tr>
+							<tr class="disabled">
+								<td><a href="client_detail.html">S106</a></td>
+								<td>2021-01-04 12:30</td>
+								<td>2021-03-03 12:30</td>
+							</tr>
+							<tr>
+								<td><a href="client_detail.html">S107</a></td>
+								<td>2021-01-03 12:30</td>
+								<td>2021-02-03 12:30</td>
+							</tr>
+							<tr class="disabled">
+								<td><a href="client_detail.html">S108</a></td>
+								<td>2021-01-02 12:30</td>
+								<td>2021-03-03 12:30</td>
+							</tr>
+							<tr>
+								<td><a href="client_detail.html">S109</a></td>
+								<td>2021-01-01 12:30</td>
+								<td>2021-03-02 12:30</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<div class="paging">
+				<span><a href="#" class="first"><em class="hiddenTxt">맨 처음</em></a></span>
+				<span><a href="#" class="prev"><em class="hiddenTxt">이전</em></a></span>
+				<ul>
+					<li class="selected"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+				<span><a href="#" class="next"><em class="hiddenTxt">다음</em></a></span>
+				<span><a href="#" class="last"><em class="hiddenTxt">맨 뒤로</em></a></span>
+			</div>
+			<div class="btn-wrap-center btn-wrap-inline bottom">
+				<a href="client_choice.html" class="btn-type-blue btn-type-lg">신규 평가대상자 추가 및 평가 시작</a>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

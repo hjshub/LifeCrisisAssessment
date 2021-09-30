@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>평가동의서 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="policy">
+		<div class="container">
+			<section>
+				<h2>평가에 참여하기 위해 평가동의서에 동의해주세요.</h2>
+				<div>
+					<h3>개인정보 수집·이용 동의</h3>
+					<div>
+						<p>
+							생명위기 평가도구는 아래와 같이 평가대상자의 개인정보를 수집∙이용합니다.  이렇게 수집된 개인정보는 관련 법규에 따라 엄격하게 관리되며 정신건강 평가자 및 관리자만이 
+							수집된 자료에 접근할 수 있습니다. 본 평가 및 면담 결과는 정신건강 관리 및 위험도 평가 이외에 다른 목적으로 사용되지 않으며, 학술연구 등의 목적을 위해 이용되는 경우 
+							별도의 동의서를 취득하거나 개인정보 보호법과 생명윤리 및 안전에 관한 법률에 따라 비밀이 보호되는 범위에서 사용될 수 있습니다.
+						</p>
+						<p class="etc"><em>&#8251;</em> 귀하는 개인정보 수집∙이용에 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 평가에 참여할 수 없습니다.</p>
+						<table>
+							<colgroup>
+								<col style="width:33.3%;" />
+								<col style="width:33.3%;" />
+								<col style="width:auto;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">수집목적</th>
+									<th scope="col">보유기간</th>
+								</tr>
+							</thead>
+							<tfoot></tfoot>
+							<tbody>
+								<tr>
+									<td>성별, 나이&#47;출생년도, 결혼상태</td>
+									<td>정신건강 관리, 고위험군 선별 및 위험도 평가</td>
+									<td>평가대상자의 동의 철회 시 또는 평가자가 계정삭제 시</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="chk-group label">
+						<span>
+							<input id="agree1" type="checkbox">
+							<label for="agree1">동의합니다.</label>
+						</span>
+					</div>
+				</div>
+
+				<div>
+					<h3>민감정보처리 동의</h3>
+					<div>
+						<p>담당자는 아래와 같이 평가대상자의 민감정보를 처리합니다.</p>
+						<p class="etc"><em>&#8251;</em> 귀하는 민감정보 처리에 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 평가에 참여하실 수 없습니다.</p>
+						<table>
+							<colgroup>
+								<col style="width:33.3%;" />
+								<col style="width:33.3%;" />
+								<col style="width:auto;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">항목</th>
+									<th scope="col">수집목적</th>
+									<th scope="col">보유기간</th>
+								</tr>
+							</thead>
+							<tfoot></tfoot>
+							<tbody>
+								<tr>
+									<td>의학적&#47;정신과적 병력</td>
+									<td>정신건강 관리,고위험군 선별 및 위험도 평가</td>
+									<td>평가대상자의 동의 철회 시 또는 평가자가<br/> 계정삭제 시</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="chk-group label">
+						<span>
+							<input id="agree2" type="checkbox">
+							<label for="agree2">동의합니다.</label>
+						</span>
+					</div>
+					<p>&nbsp;</p>
+					<p class="align-C"><strong class="ft-sm">위 내용에 동의합니다.</strong><br/><br/>2021년 04월 10일</p>
+					<p>&nbsp;</p>
+				</div>
+				<div class="btn-wrap-half btn-wrap-center">
+					<button type="button" class="btn-type-md btn-type-default">취소</button>
+					<button type="button" class="btn-type-md btn-type-blue">제출하기</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>
