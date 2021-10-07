@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 위험도 평가 면담도구 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="modify">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>자살 위험도 평가 면담도구</h2>
+			</div>
+		</div>
+		<div class="infoWrap">
+			<div class="container">
+				<ul>
+					<li>
+						<span>Subject ID</span>
+						<span class="color-blue1">2021-P0011-S101</span>
+					</li>
+					<li>
+						<span>리포트 최종 생성일</span>
+						<span>2021-01-08 13:20</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<section class="interview A7">
+				<div class="result">
+					<h3>
+						<span>A7</span>
+						<p><strong>심각도 평가</strong></p>
+					</h3>
+					<div>
+						<h4><span>a.</span> 현재 자살 위험을 평가 하십시오.</h4>
+						<p class="etc"><em>&#8251;</em> 자살 생각(A2-1), 자살 행동(A3-1), 스트레스 사건(A4-3), 정신 장애(A5-3)의 현재 삽화 심각도를 고려한 아래 권고 기준에 따라 임상가가 최종적으로 판단하십시오.</p>
+						<p>권고 기준에 따르면, 평가대상자의 현재 자살 위험 심각도는 <em class="color-blue1">경도의 자살위험</em>입니다.</p>
+						<div class="form-group">
+							<b>평가자가 최종적으로 판단한 자살 행동의 심각도는</b>
+							<span class="customed-select wide">
+								<label for="score"><em class="hiddenTxt">분류</em></label>
+								<select id="score">
+									<option value="">고도의 자살위험</option>
+									<option value="">중등도의 자살위험</option>
+									<option value="">경도의 자살위험</option>
+								</select>
+							</span>
+							<b>입니다.</b>
+						</div>
+					</div>
+					<div class="final-report innerWrap">
+						<div>
+							<p><strong>자살시도 현재 삽화가 있는 경우</strong></p>
+							<ul>
+								<li>A3-1 중증도 이상 → <em class="color-blue1">고도</em></li>
+								<li>A3-1 경도, 이외 중등도 2개 이상 → <em class="color-blue1">고도</em></li>
+								<li>A3-1 이 경도, 이외 중등도 1개 이하 → <em class="color-blue1">중등도</em></li>
+							</ul>
+						</div>
+						<div>
+							<p><strong>자살시도 현재 삽화가 없는 경우(A3-1 기준)</strong><br/><span>A2-1, A3-1, A5-3 중</span></p>
+							<ul class="half">
+								<li>고도 1개 이상 → <em class="color-blue1">고도</em></li>
+								<li>중등도 3개 이상  → <em class="color-blue1">고도</em></li>
+								<li>중등도 2개 → <em class="color-blue1">중등도</em></li>
+								<li>중등도 1개 이하  → <em class="color-blue1">경도</em></li>
+							</ul>
+						</div>
+					</div>
+					<div class="table">
+						<dl>
+							<dt><strong>b.</strong>유형을 선택하세요.</dt>
+							<dd>
+								<div class="radio-group">
+									<ul>
+										<li>
+											<span>
+												<input id="k_opt1" type="radio" name="A4_k">
+												<label for="k_opt1">우울증상 동반됨</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="k_opt2" type="radio" name="A4_k">
+												<label for="k_opt2">우울증상 동반되지 않음</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+			<div class="btn-wrap innerWrap">
+				<button type="button" class="btn-type-md btn-type-skyblue prev"><span>이전단계</span></button>
+				<button type="button" class="btn-type-md btn-type-blue finish"><span>수정하기</span></button>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

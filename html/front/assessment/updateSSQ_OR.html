@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 고위험군 선별도구 관찰자 평가형(SSQ-OR) < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="modify">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>자살 고위험군 선별도구 관찰자 평가형 (SSQ-OR)</h2>
+				<div class="caption inline bottom">
+					<span><em>&#8251;</em> 대상자를 잘 아는 관찰자가 읽고 답해주세요.</span>
+				</div>
+			</div>
+		</div>
+		<div class="infoWrap">
+			<div class="container">
+				<ul>
+					<li>
+						<span>Subject ID</span>
+						<span class="color-blue1">2021-P0011-S101</span>
+					</li>
+					<li>
+						<span>리포트 최종 생성일</span>
+						<span>2021-01-08 13:20</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<section class="ssq-or">
+				<div>
+					<div>
+						<p><strong>대상자와의 관계가 어떻게 되십니까?</strong></p>
+						<div class="form-line"><span><input type="text" title="대상자와의 관계" placeholder="예)부모" /></span></div>
+					</div>
+					<p>
+						아래에는 사람들이 때때로 나타낼 수 있는 내용들이 제시되어 있습니다.<br/>
+						다음의 문항을 자세히 읽어보시고, <em class="txt-underline">지난 한 달 동안 대상자가 주관적으로 경험한 것</em>을 기준으로 해당하는 곳 하나에 표시해주세요.
+					</p>
+					<p class="etc">
+						<em>예)</em> &lsquo;사랑하는 대상의 죽음으로 인해 고통스러워한다.&rsquo;, &lsquo;모욕 또는 부당한 대우를 당해 힘들어한다.&rsquo;의 문항처럼 특정 상황과 사건을 묻는 경우, 사건 발생이 한 달 이전 이어도 지난 한달 간 고통을 겪고 있는 경우에는  &lsquo;그렇다&rsquo;에 표시해주세요
+					</p>
+				</div>
+				<div>
+					<dl>
+						<dt><strong>Q1</strong>만나는 사람이 거의 없고 하루 중 대부분의 시간을 혼자 보낸다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q1_opt1" type="radio" name="SSQ_OR_Q1">
+											<label for="Q1_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q1_opt2" type="radio" name="SSQ_OR_Q1">
+											<label for="Q1_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q1_opt3" type="radio" name="SSQ_OR_Q1">
+											<label for="Q1_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q2</strong>사랑하는 대상의 죽음으로 인해 고통스러워한다. <em class="color-blue1">(예: 가족, 친구, 연인, 반려동물 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q2_opt1" type="radio" name="SSQ_OR_Q2">
+											<label for="Q2_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q2_opt2" type="radio" name="SSQ_OR_Q2">
+											<label for="Q2_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q2_opt3" type="radio" name="SSQ_OR_Q2">
+											<label for="Q2_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q3</strong>부모, 자녀, 형제자매 등 가족과의 갈등으로 힘들어한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q3_opt1" type="radio" name="SSQ_OR_Q3">
+											<label for="Q3_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q3_opt2" type="radio" name="SSQ_OR_Q3">
+											<label for="Q3_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q3_opt3" type="radio" name="SSQ_OR_Q3">
+											<label for="Q3_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q4</strong>배우자나 연인과의 갈등이나 이혼 또는 이별로 힘들어한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q4_opt1" type="radio" name="SSQ_OR_Q4">
+											<label for="Q4_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q4_opt2" type="radio" name="SSQ_OR_Q4">
+											<label for="Q4_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q4_opt3" type="radio" name="SSQ_OR_Q4">
+											<label for="Q4_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q5</strong>평소 스스로를 비하하거나 한심하게 여긴다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q5_opt1" type="radio" name="SSQ_OR_Q5">
+											<label for="Q5_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q5_opt2" type="radio" name="SSQ_OR_Q5">
+											<label for="Q5_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q5_opt3" type="radio" name="SSQ_OR_Q5">
+											<label for="Q5_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q6</strong>평소 위험한 일이나 후회할 만한 일을 충동적으로 저지른다.<br/> <em class="color-blue1">(예: 음주운전, 폭행, 폭식, 충동적 소비, 주변 사람과의 심한 말다툼)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q6_opt1" type="radio" name="SSQ_OR_Q6">
+											<label for="Q6_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q6_opt2" type="radio" name="SSQ_OR_Q6">
+											<label for="Q6_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q6_opt3" type="radio" name="SSQ_OR_Q6">
+											<label for="Q6_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q7</strong>평소 감정이 격해질 때 죽어버릴 거라고 말한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q7_opt1" type="radio" name="SSQ_OR_Q7">
+											<label for="Q7_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q7_opt2" type="radio" name="SSQ_OR_Q7">
+											<label for="Q7_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q7_opt3" type="radio" name="SSQ_OR_Q7">
+											<label for="Q7_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q8</strong>자살을 위한 장소, 시기, 방법을 계획한 적이 있다. <em class="color-blue1">(예: 자살 도구 구입, 장소 물색 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q8_opt1" type="radio" name="SSQ_OR_Q8">
+											<label for="Q8_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q8_opt2" type="radio" name="SSQ_OR_Q8">
+											<label for="Q8_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q8_opt3" type="radio" name="SSQ_OR_Q8">
+											<label for="Q8_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>Q9</strong>지금까지 한 번 이상 자살을 시도한 적이 있다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q9_opt1" type="radio" name="SSQ_OR_Q9">
+											<label for="Q9_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q9_opt2" type="radio" name="SSQ_OR_Q9">
+											<label for="Q9_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q9_opt3" type="radio" name="SSQ_OR_Q9">
+											<label for="Q9_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q10</strong>죽는 것만이 현재의 상황을 해결할 유일한 방법이라고 말한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q10_opt1" type="radio" name="SSQ_OR_Q10">
+											<label for="Q10_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q10_opt2" type="radio" name="SSQ_OR_Q10">
+											<label for="Q10_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q10_opt3" type="radio" name="SSQ_OR_Q10">
+											<label for="Q10_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q11</strong>자살이나 죽음에 대한 말을 한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q11_opt1" type="radio" name="SSQ_OR_Q11">
+											<label for="Q11_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q11_opt2" type="radio" name="SSQ_OR_Q11">
+											<label for="Q11_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q11_opt3" type="radio" name="SSQ_OR_Q11">
+											<label for="Q11_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q12</strong>갑자기 주변을 정리한다. <em class="color-blue1">(예: 재산 정리, 신변 정리, 관계 개선 노력 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q12_opt1" type="radio" name="SSQ_OR_Q12">
+											<label for="Q12_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q12_opt2" type="radio" name="SSQ_OR_Q12">
+											<label for="Q12_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q12_opt3" type="radio" name="SSQ_OR_Q12">
+											<label for="Q12_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q13</strong>자신이 죽어 없어지는 것이 가족이나 가까운 사람들에게 더 좋을 것이라고 말한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q13_opt1" type="radio" name="SSQ_OR_Q13">
+											<label for="Q13_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q13_opt2" type="radio" name="SSQ_OR_Q13">
+											<label for="Q13_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q13_opt3" type="radio" name="SSQ_OR_Q13">
+											<label for="Q13_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q14</strong>죽은 가족이나 친구, 반려동물, 유명인들을 따라 죽고 싶다고 말한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q14_opt1" type="radio" name="SSQ_OR_Q14">
+											<label for="Q14_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q14_opt2" type="radio" name="SSQ_OR_Q14">
+											<label for="Q14_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q14_opt3" type="radio" name="SSQ_OR_Q14">
+											<label for="Q14_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q15</strong>자살과 관련된 인터넷 검색을 하거나 죽음을 암시하는 글을 남긴 적이 있다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q15_opt1" type="radio" name="SSQ_OR_Q15">
+											<label for="Q15_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q15_opt2" type="radio" name="SSQ_OR_Q15">
+											<label for="Q15_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q15_opt3" type="radio" name="SSQ_OR_Q15">
+											<label for="Q15_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q16</strong>거의 매일 우울하거나 무기력해 보인다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q16_opt1" type="radio" name="SSQ_OR_Q16">
+											<label for="Q16_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q16_opt2" type="radio" name="SSQ_OR_Q16">
+											<label for="Q16_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q16_opt3" type="radio" name="SSQ_OR_Q16">
+											<label for="Q16_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q17</strong>상처가 날 정도로 자해를 한 적이 있다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q17_opt1" type="radio" name="SSQ_OR_Q17">
+											<label for="Q17_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q17_opt2" type="radio" name="SSQ_OR_Q17">
+											<label for="Q17_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q17_opt3" type="radio" name="SSQ_OR_Q17">
+											<label for="Q17_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q18</strong>음주로 인해 심각한 문제가 발생하지만 계속해서 술을 마신다. <em class="color-blue1">(예: 건강악화, 폭력/폭언, 대인관계 갈등 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q18_opt1" type="radio" name="SSQ_OR_Q18">
+											<label for="Q18_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q18_opt2" type="radio" name="SSQ_OR_Q18">
+											<label for="Q18_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q18_opt3" type="radio" name="SSQ_OR_Q18">
+											<label for="Q18_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q19</strong>몹시 불안하고 초조해 보인다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q19_opt1" type="radio" name="SSQ_OR_Q19">
+											<label for="Q19_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q19_opt2" type="radio" name="SSQ_OR_Q19">
+											<label for="Q19_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q19_opt3" type="radio" name="SSQ_OR_Q19">
+											<label for="Q19_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q20</strong>최근 감정의 변화가 심하다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q20_opt1" type="radio" name="SSQ_OR_Q20">
+											<label for="Q20_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q20_opt2" type="radio" name="SSQ_OR_Q20">
+											<label for="Q20_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q20_opt3" type="radio" name="SSQ_OR_Q20">
+											<label for="Q20_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q21</strong>주변의 의도를 의심하거나, 다른 사람으로부터 피해를 본다고 생각한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q21_opt1" type="radio" name="SSQ_OR_Q21">
+											<label for="Q21_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q21_opt2" type="radio" name="SSQ_OR_Q21">
+											<label for="Q21_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q21_opt3" type="radio" name="SSQ_OR_Q21">
+											<label for="Q21_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q22</strong>수면 문제를 호소한다. <em class="color-blue1">(예: 쉽게 잠들지 못함, 자주 깸, 수면 시간 변화 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q22_opt1" type="radio" name="SSQ_OR_Q22">
+											<label for="Q22_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q22_opt2" type="radio" name="SSQ_OR_Q22">
+											<label for="Q22_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q22_opt3" type="radio" name="SSQ_OR_Q22">
+											<label for="Q22_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q23</strong>실패로 인해 고통스러워한다. <em class="color-blue1">(예: 취업&#47;승진&#47;사업&#47;학업 실패 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q23_opt1" type="radio" name="SSQ_OR_Q23">
+											<label for="Q23_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q23_opt2" type="radio" name="SSQ_OR_Q23">
+											<label for="Q23_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q23_opt3" type="radio" name="SSQ_OR_Q23">
+											<label for="Q23_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q24</strong>경제적 어려움 때문에 힘들어한다. <em class="color-blue1">(예: 빚, 가난, 파산 등)</em></dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q24_opt1" type="radio" name="SSQ_OR_Q24">
+											<label for="Q24_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q24_opt2" type="radio" name="SSQ_OR_Q24">
+											<label for="Q24_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q24_opt3" type="radio" name="SSQ_OR_Q24">
+											<label for="Q24_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q25</strong>질병이나 통증으로 고통스러워한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q25_opt1" type="radio" name="SSQ_OR_Q25">
+											<label for="Q25_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q25_opt2" type="radio" name="SSQ_OR_Q25">
+											<label for="Q25_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q25_opt3" type="radio" name="SSQ_OR_Q25">
+											<label for="Q25_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q26</strong>신체적 또는 언어적 폭력이나 성폭력을 경험하고 고통스러워한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q26_opt1" type="radio" name="SSQ_OR_Q26">
+											<label for="Q26_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q26_opt2" type="radio" name="SSQ_OR_Q26">
+											<label for="Q26_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q26_opt3" type="radio" name="SSQ_OR_Q26">
+											<label for="Q26_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q27</strong>실직으로 힘들어한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q27_opt1" type="radio" name="SSQ_OR_Q27">
+											<label for="Q27_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q27_opt2" type="radio" name="SSQ_OR_Q27">
+											<label for="Q27_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q27_opt3" type="radio" name="SSQ_OR_Q27">
+											<label for="Q27_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="len02">
+						<dt><strong>Q28</strong>모욕 또는 부당한 대우를 당해 힘들어한다.</dt>
+						<dd>
+							<div class="radio-group col-3 type01">
+								<ul>
+									<li>
+										<span>
+											<input id="Q28_opt1" type="radio" name="SSQ_OR_Q28">
+											<label for="Q28_opt1">예</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q28_opt2" type="radio" name="SSQ_OR_Q28">
+											<label for="Q28_opt2">아니오</label>
+										</span>
+									</li>
+									<li>
+										<span>
+											<input id="Q28_opt3" type="radio" name="SSQ_OR_Q28">
+											<label for="Q28_opt3">모른다</label>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<div class="btn-wrap">
+				<button type="button" class="btn-type-md btn-type-blue">수정하기</button>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+</body>
+</html>

@@ -161,7 +161,7 @@ body.fixed #header {position:fixed; top:0; left:0; z-index:100;}
 #wrapper section[class*=ssq-] > div dl {width:100%; padding:40px 0 40px 30px; border:1px solid #eaeaea; box-shadow:0px 3px 7px 0px rgb(0 0 0 / 5%);}
 #wrapper section[class*=ssq-] > div dl + dl {margin-top:20px;}
 #wrapper section[class*=ssq-] > div dl dt,
-#wrapper section[class*=ssq-] > div dl dd, {width:100%;}
+#wrapper section[class*=ssq-] > div dl dd {width:100%;}
 #wrapper section[class*=ssq-] > div dl dt {font-size:1.429rem; font-weight:600; padding-left:45px; position:relative; line-height:1.4;}
 #wrapper section[class*=ssq-] > div dl.len02 dt {padding-left:55px;}
 #wrapper section[class*=ssq-] > div dl dt strong {position:absolute; top:0; left:0; line-height:1; font-size:1.929rem; color:#195496; letter-spacing:-1.5px;}
@@ -169,6 +169,16 @@ body.fixed #header {position:fixed; top:0; left:0; z-index:100;}
 #wrapper section[class*=ssq-] > div dl dd {margin-top:40px; padding-left:45px;}
 #wrapper section[class*=ssq-] + [class*=btn-wrap] {margin-top:30px !important;}
 #wrapper section[class*=ssq-] .radio-group span {word-break:break-all;}
+
+/* 설문 수정 */
+.modify .titleWrap {margin-bottom:0; position:relative; border-bottom:1px solid #dedede;}
+.modify .infoWrap {background-color:#efefef; padding:15px 0; margin-bottom:40px;}
+.modify .infoWrap ul {font-size:0;}
+.modify .infoWrap ul * {display:inline-block; font-size:0;}
+.modify .infoWrap ul li + li {margin-left:40px;}
+.modify .infoWrap ul li span {line-height:1; font-size:1.143rem; position:relative; color:#555; /* font-weight:600; */}
+.modify .infoWrap ul li span + span {padding-left:17px;}
+.modify .infoWrap ul li span + span:before {display:inline-block; width:1px; height:10px; position:absolute; background-color:#8e8e8e; left:8px; top:50%; margin-top:-4px; content:'';}
 
 /* 도구 소개 */
 #wrapper section.ssq-mn > div > .tit01,

@@ -99,7 +99,10 @@ h1 {font-size:2.286rem;}
 	#wrapper section.interview .final-report > div ul.half li {width:49%;}
 	#wrapper section.ssq-mn > div > div dl {padding:20px;}
 	#wrapper section.ssq-mn > div > div dl dt span {margin-right:10px;}
-
+	
+	.modify .infoWrap ul li {width:100%;}
+	.modify .infoWrap ul li + li {margin-left:0; margin-top:10px;}
+	
 	/** Table Layout **/
 	[class^=table-layout] .col2 dl {display:block; border-bottom:1px solid #ccc;}
 	[class^=table-layout] .col2 dl dt,

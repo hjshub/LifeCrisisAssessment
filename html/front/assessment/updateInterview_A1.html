@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+	<title>자살 위험도 평가 면담도구 < 보건복지부 생명위기 평가도구 front</title>
+
+	<script src="../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="../asset/js/jquery-ui.min.js"></script>
+	<script src="../asset/js/common.js"></script>
+
+	<link rel="stylesheet" href="../asset/css/jquery-ui.min.css">
+	<link rel="stylesheet" media="all" href="../asset/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1024px)" href="../asset/css/style_1024.css">
+	<link rel="stylesheet" media="all and (max-width:768px)" href="../asset/css/style_768.css">
+	<link rel="stylesheet" media="all and (max-width:640px)" href="../asset/css/style_640.css">
+</head>
+<body class="fixed">
+	<!-- 바로가기 -->
+	<div class="skipNavigation">
+		<dl>
+			<dt>바로 가기</dt>
+			<dd><a href="#header">주 메뉴 바로가기</a></dd>
+			<dd><a href="#wrapper">본문 바로가기</a></dd>
+		</dl>
+	</div>
+	<!-- // 바로가기 -->
+
+	<!-- 상단 -->
+	<header id="header">
+		<div class="topMenu">
+			<div class="container">
+				<span class="btn go--back"><a href="javascript:void(0);" onclick="history.go(-1);"><em class="hiddenTxt">뒤로가기</em></a></span>
+				<span class="btn q--menu"><a href="#quickMenu"><em class="hiddenTxt">전체 메뉴</em><i></i><i></i><i></i></a></span>
+			</div>
+		</div>
+		<nav class="quickMenu">
+			<div class="container">
+				<ul class="q1">
+					<li><a href="../client/client_list.html">기존 평가대상자 관리 및 평가</a></li>
+					<li><a href="../client/client_choice.html">신규 평가대상자 추가 및 평가</a></li>
+				</ul>
+				<ul class="q2">
+					<li><a href="../information/manual.html">도구매뉴얼</a></li>
+					<li><a href="../information/location.html">상담 센터 찾기</a></li>
+				</ul>
+				<ul class="q3">
+					<li><a href="../member/member_modify_pw.html">회원정보수정</a></li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- // 상단 -->
+
+	<!--본문 -->
+	<div id="wrapper" class="modify">
+		<div class="titleWrap">
+			<div class="container">
+				<h2>자살 위험도 평가 면담도구</h2>
+			</div>
+		</div>
+		<div class="infoWrap">
+			<div class="container">
+				<ul>
+					<li>
+						<span>Subject ID</span>
+						<span class="color-blue1">2021-P0011-S101</span>
+					</li>
+					<li>
+						<span>리포트 최종 생성일</span>
+						<span>2021-01-08 13:20</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<section class="interview A1">
+				<div>
+					<h3><span>A1</span></h3>
+					<div>
+						<dl>
+							<dt><strong>a.</strong>과거부터 지금까지 죽는 것이 낫다고 생각하거나 죽었으면 하고 바란 적이 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="a_opt1" type="radio" name="A1_a">
+												<label for="a_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="a_opt2" type="radio" name="A1_a">
+												<label for="a_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<div>
+							<strong>A1 a</strong> = <strong>&lsquo;예&rsquo;</strong> 일 경우 : <strong>b</strong>를 실시하십시오. <strong>‘아니오’</strong> 일 경우 : <strong>A3</strong>으로 넘어갑니다.
+						</div>
+					</div>
+					<div id="A1_b">
+						<dl>
+							<dt><strong>b.</strong>지난 1개월 동안 죽는 것이 낫다고 생각하거나 죽었으면 하고 바란 적이 있습니까?</dt>
+							<dd>
+								<div class="radio-group col-2">
+									<ul>
+										<li>
+											<span>
+												<input id="b_opt1" type="radio" name="A1_b">
+												<label for="b_opt1">예</label>
+											</span>
+										</li>
+										<li>
+											<span>
+												<input id="b_opt2" type="radio" name="A1_b">
+												<label for="b_opt2">아니요</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<div>
+							만약 지난 <strong>1</strong>개월 동안 자살 생각이 있었다면<strong>(A1 b = &lsquo;예&rsquo;)</strong> : 최근 <strong>1</strong>개월 간의 <strong>현재 삽화</strong>를 조사하십시오.<br/>
+							<strong>&lsquo;아니오&rsquo;</strong>일 경우 : 증상이 가장 심했던 <strong>과거 삽화</strong>를 조사 하십시오
+						</div>
+						<div class="input type01 xs innerWrap">
+							<div>
+								<strong>과거 삽화 때 나이를 입력해주세요.</strong>
+							</div>
+							<div class="form-line">
+								<span>만 <input type="text" title="과거 삽화 당시 나이" />세</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="btn-wrap-half">
+				<button type="button" class="btn-type-md btn-type-blue next"><span>다음단계</span></button>
+			</div>
+		</div>
+	</div>
+	<!--// 본문 -->
+
+	<script>
+		$(function(){
+			if($('#a_opt1').prop('checked')){ // 페이지 로드 시 A1-a 항목 '예' 일 경우
+				$('#A1_b').css('display','block');
+				
+				if($('#b_opt2').prop('checked')){ // 페이지 로드 시 A1-b 항목 '아니오' 일 경우
+					$('.interview.A1').find('.input').css('display','block');
+				}
+			}
+
+			$('input[name=A1_a]').on('change', function(){ 
+				if($('#a_opt1').prop('checked')){ // A1-a 항목 '예' 일 경우
+					$('#A1_b').stop().fadeIn(200);
+				}else if($('#a_opt2').prop('checked')){ // A1-a 항목 '아니오' 일 경우
+					$('#A1_b').stop().fadeOut(200);
+					$('input[name=A1_b]').prop('checked',false);
+					$('.interview.A1').find('.input input[type=text]').val('');
+					$('.interview.A1').find('.input').stop().fadeOut(200);
+				}
+			});
+
+			$('input[name=A1_b]').on('change', function(){
+				if($('#b_opt2').prop('checked')){ // A1-b 항목 '아니오' 일 경우
+					$('.interview.A1').find('.input').stop().fadeIn(200);
+				}else if($('#b_opt1').prop('checked')){ // A1-b 항목 '예' 일 경우
+					$('.interview.A1').find('.input input[type=text]').val('');
+					$('.interview.A1').find('.input').stop().fadeOut(200);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
